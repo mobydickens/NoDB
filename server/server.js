@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 
 //endpoints
-
+app.get('/books', controller.defaultList);
 
 app.listen(config.port, () => { 
     console.log(`The server at port ${config.port} is live!`);
