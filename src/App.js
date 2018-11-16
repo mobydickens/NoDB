@@ -11,7 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      route: "Recommendations",
+      route: "Add new book",
       default: []
     }
   }
@@ -31,12 +31,6 @@ class App extends Component {
     return (
       <div >
         <Header />
-        <div className="rec-title">
-          <h1 className="title new-reads">New Reads</h1>
-          <h4 className="subtitle">
-            A better place find and save your to-read books
-          </h4>
-        </div>
         {this.state.route === "Recommendations" ? <Recommendations default={ this.state.default } /> : null }
         {this.state.route === "Add new book" ? <AddBook /> : null }
         {this.state.route === "Favorites" ? <Favorites /> : null }
