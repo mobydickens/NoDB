@@ -22,6 +22,13 @@ function Recommendations(props) {
             <div className="rec-box">{}</div>
             <div className="rec-box">{}</div>
         </main>
+        <div className="rec-button-parent">
+            <button 
+                type="button" 
+                className="btn btn-secondary">
+                Add books to your own to-read list!
+            </button>
+        </div>
       </div>
     );
 }

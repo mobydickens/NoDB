@@ -36,13 +36,13 @@ class App extends Component {
           <div>
             <button 
               className="btn btn-primary nav-button" 
-              onClick={ () => this.setState({ route: "Add new book" }) }>
-              Add new book
+              onClick={ () => this.setState({ route: "Recommendations" }) }>
+              Recommendations
             </button>
             <button 
               className="btn btn-primary nav-button" 
-              onClick={ () => this.setState({ route: "Recommendations" }) }>
-              Recommendations
+              onClick={ () => this.setState({ route: "Add new book" }) }>
+              Add new book
             </button>
             <button 
               className="btn btn-primary nav-button" 
