@@ -1,5 +1,3 @@
 // User booklist
 
-module.exports = [
-    
-]
+module.exports = [];
