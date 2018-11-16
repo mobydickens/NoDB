@@ -10,9 +10,15 @@ nav {
   justify-content: space-between;
 }
 
-/* .nav-title {
- 
-} */
+.nav-button {
+  border: none;
+  margin: 25px;
+}
+
+
+.nav-title {
+  margin: 25px;
+}
 
 /* .navigation {
 
@@ -24,7 +30,7 @@ nav {
 }
 
 /* recommendations component */
-main {
+.rec-box-parent {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -38,6 +44,6 @@ main {
 }
 
 /* add book component */
-/* .add-parent {
-
-} */
+.add-parent {
+  text-align: center;
+}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header.jsx';
 import Recommendations from './components/Recommendations.jsx';
 import AddBook from './components/AddBook.jsx';
 import Favorites from './components/Favorites.jsx';
@@ -11,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      route: "Add new book",
+      route: "Favorites",
       default: []
     }
   }
@@ -30,7 +29,28 @@ class App extends Component {
   render() {
     return (
       <div >
-        <Header />
+        <nav>
+          <div>
+            <h1 className="nav-title">New Reads</h1>
+          </div>
+          <div>
+            <button 
+              className="nav-button" 
+              onClick={ () => this.setState({ route: "Add new book" }) }>
+              Add new book
+            </button>
+            <button 
+              className="nav-button" 
+              onClick={ () => this.setState({ route: "Recommendations" }) }>
+              Recommendations
+            </button>
+            <button 
+              className="nav-button" 
+              onClick={ () => this.setState({ route: "Favorites" })}>
+              Favorites
+            </button>
+          </div>
+        </nav>
         {this.state.route === "Recommendations" ? <Recommendations default={ this.state.default } /> : null }
         {this.state.route === "Add new book" ? <AddBook /> : null }
         {this.state.route === "Favorites" ? <Favorites /> : null }

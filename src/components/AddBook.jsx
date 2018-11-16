@@ -32,8 +32,8 @@ class AddBook extends Component {
   render() {
     return (
       <div >
-        <main>
-            <div>Add a book to read in Favorites</div>
+        <main className="add-parent">
+            <div>Add a book to read in Favorites</div><br/>
             <input 
                 type="text" 
                 placeholder="Title"
@@ -53,7 +53,7 @@ class AddBook extends Component {
                 type="text" 
                 placeholder="Recommended by"
                 value={ this.state.recommended }  
-                onChange={ (e) => this.setState({ recommended: e.target.value })} />
+                onChange={ (e) => this.setState({ recommended: e.target.value })} /><br/>
             <button onClick={ () => this.addBook(this.state)} > Add </button>
         </main>
       </div>

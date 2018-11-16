@@ -17,7 +17,7 @@ function Recommendations(props) {
                 A better place find and save your to-read books
             </h4>
         </div>
-        <main>
+        <main className="rec-box-parent">
             <div className="rec-box">{recommendations}</div>
             <div className="rec-box">{}</div>
             <div className="rec-box">{}</div>
