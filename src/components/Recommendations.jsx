@@ -1,32 +1,13 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from 'react';
 
-class Recommendations extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-        default: []
-    }
-  }
+function Recommendations(props) {
 
-  //first GET upon render
-  componentDidMount() {
-      axios
-        .get('/books')
-        .then(res => {
-            this.setState({
-                default: res.data
-            })
-      })
-  }
-
-  render() {
-      const recommendations = this.state.default.map(book => {
-          return(
-              <div key={book.id}>{book.title}</div>
-          )
-      })
+    const recommendations = props.default.map(book => {
+        return(
+            <div key={book.id}>{book.title}</div>
+        )
+    })
 
     return (
       <div className="container">
@@ -37,9 +18,8 @@ class Recommendations extends Component {
           </main>
       </div>
     );
-  }
 }
 
 export default Recommendations;
 
-//so if in each recommendation box I want to have a single BOOK, where would I put state? ...
+
