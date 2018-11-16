@@ -10,28 +10,33 @@ class AddBook extends Component {
             title: "",
             author: "",
             genre: "",
-            recommended: ""
+            recommended: "",
+            userBooklist: []
         }
   }
-
+  
   addBook = (book) => {
     axios
         .post('/books', book)
         .then(res => {
             //need to add a check to see if book is already in 'favorites list'
+            //need to add check to see if any input boxes are empty
+            // console.log("axios response", res)
             alert("your book has been added!");
             this.setState({
                 title: "",
                 author: "",
                 genre: "",
-                recommended: ""
+                recommended: "",
+                userBooklist: res.data
             })
         })
   }
 
   render() {
+
     return (
-      <div >
+      <div>
         <main className="add-parent">
             <div>Add a book to read in Favorites</div><br/>
             <input 
@@ -55,6 +60,7 @@ class AddBook extends Component {
                 value={ this.state.recommended }  
                 onChange={ (e) => this.setState({ recommended: e.target.value })} /><br/>
             <button onClick={ () => this.addBook(this.state)} > Add </button>
+            {/* <button onClick={  }>Take me to favorites</button> */}
         </main>
       </div>
     );

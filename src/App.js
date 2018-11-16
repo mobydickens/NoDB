@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
 import Recommendations from './components/Recommendations.jsx';
 import AddBook from './components/AddBook.jsx';
 import Favorites from './components/Favorites.jsx';
-import axios from 'axios';
 
 class App extends Component {
 
@@ -29,30 +29,30 @@ class App extends Component {
   render() {
     return (
       <div >
-        <nav>
+        <nav className="navbar navbar-dark bg-primary">
           <div>
-            <h1 className="nav-title">New Reads</h1>
+            <h1 className="navbar-brand">New Reads</h1>
           </div>
           <div>
             <button 
-              className="nav-button" 
+              className="btn btn-primary nav-button" 
               onClick={ () => this.setState({ route: "Add new book" }) }>
               Add new book
             </button>
             <button 
-              className="nav-button" 
+              className="btn btn-primary nav-button" 
               onClick={ () => this.setState({ route: "Recommendations" }) }>
               Recommendations
             </button>
             <button 
-              className="nav-button" 
+              className="btn btn-primary nav-button" 
               onClick={ () => this.setState({ route: "Favorites" })}>
               Favorites
             </button>
           </div>
         </nav>
         {this.state.route === "Recommendations" ? <Recommendations default={ this.state.default } /> : null }
-        {this.state.route === "Add new book" ? <AddBook /> : null }
+        {this.state.route === "Add new book" ? <AddBook route={ this.state.route }/> : null }
         {this.state.route === "Favorites" ? <Favorites /> : null }
       </div>
     );

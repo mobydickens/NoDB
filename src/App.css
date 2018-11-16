@@ -4,7 +4,8 @@
   padding: 0;
 }
 
-/* header component and navbar */
+/* App component */
+/* header and navbar */
 nav {
   display: flex;
   justify-content: space-between;
@@ -12,24 +13,14 @@ nav {
 
 .nav-button {
   border: none;
-  margin: 25px;
+  margin: 0 25px;
 }
 
-
-.nav-title {
-  margin: 25px;
-}
-
-/* .navigation {
-
-}  */
-
-/* app component */
 .rec-title {
   text-align: center;
 }
 
-/* recommendations component */
+/* Recommendations component */
 .rec-box-parent {
   display: flex;
   justify-content: center;
@@ -43,7 +34,20 @@ nav {
   height: 500px;
 }
 
-/* add book component */
+/* AddBook component */
 .add-parent {
   text-align: center;
+}
+.book-parent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Book component */
+.book {
+  border: 1px solid grey;
+  width: 250px;
+  height: 400px;
+  margin: 20px;
 }
