@@ -33,6 +33,10 @@ nav {
   width: 300px;
   height: 500px;
 }
+.rec-button-parent {
+  display: flex;
+  justify-content: center;
+}
 
 /* AddBook component */
 .add-parent {
