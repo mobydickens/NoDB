@@ -7,7 +7,7 @@ class Header extends Component {
       <div >
         <nav>
             <div>
-                <h1 className="title">New Reads</h1>
+                <h1 className="nav-title">New Reads</h1>
             </div>
             <div>
                 <a className="navigation" href="#">Add new book</a>

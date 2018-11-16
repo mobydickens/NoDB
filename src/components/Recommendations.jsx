@@ -10,8 +10,12 @@ class Recommendations extends Component {
 
   render() {
     return (
-      <div >
-    
+      <div className="container">
+          <main>
+              <div className="rec-box"></div>
+              <div className="rec-box"></div>
+              <div className="rec-box"></div>
+          </main>
       </div>
     );
   }

@@ -21,6 +21,12 @@ class App extends Component {
     return (
       <div >
         <Header />
+        <div className="rec-title">
+          <h1 className="title new-reads">New Reads</h1>
+          <h4 className="subtitle">
+            A better place find and save your to-read books
+          </h4>
+        </div>
         {this.state.route === "Recommendations" ? <Recommendations /> : null }
         {this.state.route === "Add new book" ? <AddBook /> : null }
         {this.state.route === "Favorites" ? <Favorites /> : null }

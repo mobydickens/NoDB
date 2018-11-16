@@ -4,3 +4,38 @@
   padding: 0;
 }
 
+/* header component and navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .nav-title {
+ 
+} */
+
+/* .navigation {
+
+}  */
+
+/* app component */
+.rec-title {
+  text-align: center;
+}
+
+/* recommendations component */
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rec-box {
+  border: 1px solid gray;
+  margin: 20px;
+  width: 300px;
+  height: 500px;
+}
+
+
+
