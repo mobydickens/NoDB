@@ -83,9 +83,8 @@ module.exports = [
         id: 9
     },
     //10 science fiction
-    
-]
 
+]
 
 //format for books
 // {
