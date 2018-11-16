@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 //Completes ONE stateful component
 class AddBook extends Component {
@@ -13,7 +14,20 @@ class AddBook extends Component {
         }
   }
 
-  
+  addBook = (book) => {
+    axios
+        .post('/books', book)
+        .then(res => {
+            //need to add a check to see if book is already in 'favorites list'
+            alert("your book has been added!");
+            this.setState({
+                title: "",
+                author: "",
+                genre: "",
+                recommended: ""
+            })
+        })
+  }
 
   render() {
     return (
@@ -40,7 +54,7 @@ class AddBook extends Component {
                 placeholder="Recommended by"
                 value={ this.state.recommended }  
                 onChange={ (e) => this.setState({ recommended: e.target.value })} />
-            <button> Add </button>
+            <button onClick={ () => this.addBook(this.state)} > Add </button>
         </main>
       </div>
     );
