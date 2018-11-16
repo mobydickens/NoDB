@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 //endpoints
 app.get('/books', controller.defaultList);
+app.post('/books', controller.addUserBook);
 
 app.listen(config.port, () => { 
     console.log(`The server at port ${config.port} is live!`);
