@@ -47,7 +47,7 @@ class AddBook extends Component {
                 placeholder="Author"
                 value={ this.state.author } 
                 onChange={ (e) => this.setState({ author: e.target.value })} />
-            <DropdownBtn genrePickerFn={ this.genrePicker }/>
+            <DropdownBtn genrePickerFn={ this.genrePicker } />
             <input 
                 type="text"
                 placeholder="Recommended by"

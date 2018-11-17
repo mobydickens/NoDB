@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 app.get('/books', controller.defaultList);
 app.get('/userbooks', controller.userBooklist)
 app.post('/books', controller.addUserBook);
+app.put('/userbooks/:id', controller.editUserBook)
 
 app.listen(config.port, () => { 
     console.log(`The server at port ${config.port} is live!`);

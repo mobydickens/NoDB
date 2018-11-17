@@ -46,6 +46,12 @@ class App extends Component {
       })
   }
 
+  editBook = (edited) => {
+    this.setState({
+      userBooklist: edited
+    })
+  }
+
   render() {
     return (
       <div >
@@ -101,10 +107,15 @@ class App extends Component {
             /> : null }
         {this.state.route === "Favorites" 
           ? <Favorites 
-              userBooklist={ this.state.userBooklist }/> : null }
+              userBooklist={ this.state.userBooklist }
+              editBookFn={ this.editBook }/> : null }
       </div>
     );
   }
 }
 
 export default App;
+
+
+//need an edit button function that will take in the new values
+//pass THAT down to favorites, who will pass it right through to EDIT BUTTON. BUtton will run that function in its own function and pass value back as it's return. 

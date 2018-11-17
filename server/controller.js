@@ -10,8 +10,7 @@ module.exports = {
     userBooklist: (req, res) => {
         res.status(200).send(userBooklist);
     },
-    //POST
-    //will take in req.body
+    //POST - will take in req.body
     addUserBook: (req, res) => {
         const { title, author, genre, recommended } = req.body
         const book = {
@@ -24,5 +23,9 @@ module.exports = {
         id++
         userBooklist.push(book);
         res.status(200).send(userBooklist);
+    },
+    //PUT - takes in req.body and id
+    editUserBook: (req, res) => {
+        
     }
 }

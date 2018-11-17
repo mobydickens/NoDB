@@ -1,5 +1,6 @@
+//Child of APP
+
 import React, { Component } from 'react';
-// import axios from 'axios';
 import EditButton from './EditButton.jsx';
 
 class Favorites extends Component {
@@ -12,7 +13,12 @@ class Favorites extends Component {
                     <div>{book.title} by {book.author}</div>
                     <div>{book.genre}</div>
                     <div>Recommended by {book.recommended}</div>
-                    <EditButton />
+                    <EditButton 
+                        title={ book.title }
+                        author={ book.author }
+                        recommended={ book.recommended }
+                        id={ book.id }
+                        editBookFn={ this.props.editBookFn } />
                     {/* <button>Edit</button> */}
                     <button>Delete</button>
                 </div>)
