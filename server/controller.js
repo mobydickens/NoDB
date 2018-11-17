@@ -24,10 +24,20 @@ module.exports = {
         userBooklist.push(book);
         res.status(200).send(userBooklist);
     },
-    //PUT - takes in req.body and id
+    //PUT - expects param id and body
     editUserBook: (req, res) => {
-        let { title, author, recommended, genre } = req.body;
         let { id } = req.params;
+        let { title, author, genre, recommended } = req.body
+        let bookIndex = userBooklist.findIndex(book => {
+            return book.id === Number(id);
+        })
+        book[bookIndex] = {
+            title: title,
+            author: author,
+            genre: genre,
+            recommended: recommended,
+            id: id
+        }
         res.status(200).send(userBooklist);
     }
 }

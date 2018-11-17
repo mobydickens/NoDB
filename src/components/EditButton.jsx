@@ -18,13 +18,13 @@ class EditButton extends Component {
 
 
     editBook = () => {
-        axios.put('/userbooks/:id', this.state.).then(res => {
-            console.log(res.data)
-            // editBookFn(res.data)
+        axios.put('/userbooks/:id', this.state).then(res => {
+            this.props.editBookFn(res.data)
         })
     }
 
     render() {
+        console.log(this.state);
         return(
             <div>
                 <p>
@@ -42,9 +42,19 @@ class EditButton extends Component {
                             type="text" 
                             value={ this.props.title }
                             onChange={ (e) => this.setState({ title: e.target.value }) } />
-                        <input type="text" value={ this.props.author } />
-                        <DropdownBtn />
-                        <input type="text" value={ this.props.recommended } />
+                        <input 
+                            type="text" 
+                            value={ this.props.author }
+                            onChange={ (e) => this.setState({ author: e.target.value }) } />
+                        <input 
+                            type="text" 
+                            value={ this.props.genre }
+                            onChange={ (e) => this.setState({ genre: e.target.value })} />
+                        <input 
+                            type="text" 
+                            value={ this.props.recommended }
+                            onChange={ (e) => this.setState({ recommended: e.target.value || "" })} />
+                        <button onClick={ () => this.editBook() }>Save</button>
                     </div>
                 </div> 
             </div>
