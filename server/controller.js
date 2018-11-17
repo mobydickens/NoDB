@@ -7,10 +7,6 @@ module.exports = {
     defaultList: (req, res) => {
         res.status(200).send(defaultBooklist);
     },
-    //GET
-    userList: (req, res) => {
-        res.status(200).send(userBooklist);
-    },
     //POST
     //will take in req.body
     addUserBook: (req, res) => {

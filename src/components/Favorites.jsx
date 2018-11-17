@@ -1,27 +1,10 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 class Favorites extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            userList: []
-        }
-    }
-    
-    componentDidMount() {
-// need to change this so it rerenders after changes
-        axios.get('/userList').then(res => {
-            // console.log(res.data);
-            this.setState({
-                userList: res.data
-            })
-        })
-    }
- 
     render() {
-        const book = this.state.userList.map(book => {
+        const book = this.props.userBooklist.map(book => {
             //need to check if list is EMPTY, and return a prompt if so (maybe a button to take you to the AddBook Page)
             return(
                 <div className="book" key={book.id}>

@@ -10,9 +10,10 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      route: "Favorites",
+      route: "Add new book",
       default: [],
-      userBooklist: []
+      userBooklist: [],
+      activeButton: "rec"
     }
   }
 
@@ -49,19 +50,37 @@ class App extends Component {
             <h1 className="navbar-brand">New Reads</h1>
           </div>
           <div>
-            <button 
-              className="btn btn-primary nav-button" 
-              onClick={ () => this.setState({ route: "Recommendations" }) }>
+            <button
+              name="rec" 
+              className={ this.state.activeButton === "rec" 
+                ? "btn btn-primary nav-button active" 
+                : "btn btn-primary nav-button"}
+              onClick={ (e) => this.setState({ 
+                route: "Recommendations",
+                activeButton: "rec"
+                }) }>
               Recommendations
             </button>
-            <button 
-              className="btn btn-primary nav-button" 
-              onClick={ () => this.setState({ route: "Add new book" }) }>
+            <button
+              name="add" 
+              className={this.state.activeButton === "add" 
+              ? "btn btn-primary nav-button active" 
+              : "btn btn-primary nav-button"}
+              onClick={ () => this.setState({ 
+                route: "Add new book",
+                activeButton: "add"
+                }) }>
               Add new book
             </button>
-            <button 
-              className="btn btn-primary nav-button" 
-              onClick={ () => this.setState({ route: "Favorites" })}>
+            <button
+              name="fav" 
+              className={this.state.activeButton === "fav" 
+              ? "btn btn-primary nav-button active" 
+              : "btn btn-primary nav-button"}
+              onClick={ () => this.setState({ 
+                route: "Favorites",
+                activeButton: "fav" 
+                })}>
               Favorites
             </button>
           </div>
@@ -77,7 +96,8 @@ class App extends Component {
               addBookFn={ this.addBook }
             /> : null }
         {this.state.route === "Favorites" 
-          ? <Favorites /> : null }
+          ? <Favorites 
+              userBooklist={ this.state.userBooklist }/> : null }
       </div>
     );
   }

@@ -26,7 +26,7 @@ function Recommendations(props) {
             <button 
                 type="button" 
                 className="btn btn-secondary">
-                Add books to your own to-read list!
+                Click to add your own book to favorites!
             </button>
         </div>
       </div>

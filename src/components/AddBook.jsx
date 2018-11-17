@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import DropdownBtn from './DropdownBtn.jsx';
 
 //Completes ONE stateful component
 class AddBook extends Component {
@@ -20,10 +21,15 @@ class AddBook extends Component {
         title: "",
         author: "",
         genre: "",
-        recommended: "",
+        recommended: ""
     })
   }
 
+  genrePicker = (val) => {
+    this.setState({
+        genre: val
+    })
+  }
 
   render() {
 
@@ -41,13 +47,9 @@ class AddBook extends Component {
                 placeholder="Author"
                 value={ this.state.author } 
                 onChange={ (e) => this.setState({ author: e.target.value })} />
+            <DropdownBtn genrePickerFn={ this.genrePicker }/>
             <input 
-                type="text" 
-                placeholder="Genre"
-                value={ this.state.genre } 
-                onChange={ (e) => this.setState({ genre: e.target.value })} />
-            <input 
-                type="text" 
+                type="text"
                 placeholder="Recommended by"
                 value={ this.state.recommended }  
                 onChange={ (e) => this.setState({ recommended: e.target.value })} /><br/>
