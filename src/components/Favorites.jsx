@@ -10,15 +10,14 @@ class Favorites extends Component {
                 <div className="book" key={book.id}>
                     <div>{book.title} by {book.author}</div>
                     <div>{book.genre}</div>
-                    <div>{book.recommended}</div>
+                    <div>Recommended by {book.recommended}</div>
                     <button>Edit</button>
                     <button>Delete</button>
                 </div>)
         })
 
-        return (
-            
-        <div >
+        return ( 
+        <div className="container">
             <h3>Favorites</h3>
             <h5>To read</h5>
             <div className="book-parent">

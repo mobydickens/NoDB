@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 //endpoints
 app.get('/books', controller.defaultList);
+app.get('/userbooks', controller.userBooklist)
 app.post('/books', controller.addUserBook);
 
 app.listen(config.port, () => { 

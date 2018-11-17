@@ -34,7 +34,7 @@ class AddBook extends Component {
   render() {
 
     return (
-      <div>
+      <div className="container">
         <main className="add-parent">
             <div>Add a book to read in Favorites</div><br/>
             <input 

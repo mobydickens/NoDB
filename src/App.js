@@ -10,22 +10,26 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      route: "Add new book",
+      route: "Favorites",
       default: [],
       userBooklist: [],
       activeButton: "rec"
     }
   }
 
- //GET upon render, sets state with default list of books sent from server
+ //GET upon render, sets state with default list of books from default and user lists sent from server
  componentDidMount() {
-  axios
-    .get('/books')
-    .then(res => {
-        this.setState({
-            default: res.data
-        })
-    })
+  let that = this;
+  axios.all([
+    axios.get('/books'),
+    axios.get('/userbooks')
+  ])
+    .then(axios.spread(function(books, userbooks) {
+      that.setState({
+          default: books.data,
+          userBooklist: userbooks.data
+      })
+    }))
   }
   
   addBook = (book) => {
