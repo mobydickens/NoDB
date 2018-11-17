@@ -26,6 +26,8 @@ module.exports = {
     },
     //PUT - takes in req.body and id
     editUserBook: (req, res) => {
-        
+        let { title, author, recommended, genre } = req.body;
+        let { id } = req.params;
+        res.status(200).send(userBooklist);
     }
 }

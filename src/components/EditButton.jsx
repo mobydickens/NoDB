@@ -7,12 +7,18 @@ class EditButton extends Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            title: this.props.title,
+            author: this.props.author,
+            genre: this.props.genre,
+            recommended: this.props.recommended,
+            id: this.props.id
         }
     }
 
+
+
     editBook = () => {
-        axios.put('/userbooks/:id').then(res => {
+        axios.put('/userbooks/:id', this.state.).then(res => {
             console.log(res.data)
             // editBookFn(res.data)
         })
@@ -32,7 +38,10 @@ class EditButton extends Component {
                 <div 
                 className="collapse"   id="collapseExample">
                     <div className="card card-body">
-                        <input type="text" value={ this.props.title } />
+                        <input 
+                            type="text" 
+                            value={ this.props.title }
+                            onChange={ (e) => this.setState({ title: e.target.value }) } />
                         <input type="text" value={ this.props.author } />
                         <DropdownBtn />
                         <input type="text" value={ this.props.recommended } />
