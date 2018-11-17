@@ -11,7 +11,8 @@ class App extends Component {
     super(props)
     this.state = {
       route: "Favorites",
-      default: []
+      default: [],
+      userBooklist: []
     }
   }
 
@@ -24,6 +25,20 @@ class App extends Component {
             default: res.data
         })
     })
+  }
+  
+  addBook = (book) => {
+    axios
+      .post('/books', book)
+      .then(res => {
+        //need to add a check to see if book is already in 'favorites list'
+        //need to add check to see if any input boxes are empty
+        // console.log("axios response", res)
+        alert("your book has been added!");
+        this.setState({
+          userBooklist: res.data
+        })
+      })
   }
 
   render() {
@@ -51,9 +66,18 @@ class App extends Component {
             </button>
           </div>
         </nav>
-        {this.state.route === "Recommendations" ? <Recommendations default={ this.state.default } /> : null }
-        {this.state.route === "Add new book" ? <AddBook route={ this.state.route }/> : null }
-        {this.state.route === "Favorites" ? <Favorites /> : null }
+        {this.state.route === "Recommendations" 
+          ? <Recommendations 
+              default={ this.state.default } 
+            /> : null }
+        {this.state.route === "Add new book" 
+          ? <AddBook 
+              route={ this.state.route }
+              userBooklist={ this.state.userBooklist }
+              addBookFn={ this.addBook }
+            /> : null }
+        {this.state.route === "Favorites" 
+          ? <Favorites /> : null }
       </div>
     );
   }
