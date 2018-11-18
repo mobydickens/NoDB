@@ -39,5 +39,13 @@ module.exports = {
             id: Number(id)
         }
         res.status(200).send(userBooklist);
+    },
+    //DELETE
+    deleteUserBook: (req, res) => {
+        let { id } = req.query;
+        userBooklist = userBooklist.filter(book => {
+            return book.id !== Number(id);
+        })
+        res.status(200).send(userBooklist);
     }
 }

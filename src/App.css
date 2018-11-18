@@ -54,10 +54,27 @@ nav {
   flex-wrap: wrap;
 }
 
-/* Book component */
+/* Favorites component */
 .book {
+  text-align: center;
   border: 1px solid grey;
   width: 250px;
   height: 400px;
   margin: 20px;
+  padding: 20px;
+}
+
+.favorite-btn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 260px;
+}
+
+.fav-child-btn {
+  margin: 3px;
+  padding: 0px;
+  width: 60px;
+  height: 30px;
+  border-radius: 3px;
 }

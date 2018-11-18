@@ -32,6 +32,22 @@ class App extends Component {
     }))
   }
   
+  componentDidUpdate(prevProps) {
+    if (this.props.title !== prevProps.title 
+            || this.props.author !== prevProps.author
+            || this.props.genre !== prevProps.genre
+            || this.props.recommended !== prevProps.recommended
+            ) {
+        this.setState({
+            title: this.props.title,
+            author: this.props.author,
+            genre: this.props.genre,
+            recommended: this.props.recommended,
+            id: this.props.id
+        })
+      }
+    } 
+
   addBook = (book) => {
     axios
       .post('/books', book)
@@ -47,7 +63,12 @@ class App extends Component {
   }
 
   editBook = (edited) => {
-    console.log("is it calling?", edited);
+    this.setState({
+      userBooklist: edited
+    })
+  }
+
+  deleteBook = (edited) => {
     this.setState({
       userBooklist: edited
     })
@@ -109,7 +130,8 @@ class App extends Component {
         {this.state.route === "Favorites" 
           ? <Favorites 
               userBooklist={ this.state.userBooklist }
-              editBookFn={ this.editBook }/> : null }
+              editBookFn={ this.editBook }
+              deleteBookFn={ this.deleteBook } /> : null }
       </div>
     );
   }

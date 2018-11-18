@@ -15,24 +15,6 @@ class EditButton extends Component {
         }
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.title !== prevProps.title 
-                || this.props.author !== prevProps.author
-                || this.props.genre !== prevProps.genre
-                || this.props.recommended !== prevProps.recommended
-                ) {
-            this.setState({
-                title: this.props.title,
-                author: this.props.author,
-                genre: this.props.genre,
-                recommended: this.props.recommended,
-                id: this.props.id
-            })
-          }
-    }
-
-
-
     editBook = () => {
         axios.put(`/userbooks/${this.state.id}`, this.state).then(res => {
             this.props.editBookFn(res.data)
@@ -42,15 +24,14 @@ class EditButton extends Component {
     render() {
         // console.log(this.state);
         return(
-            <div>
-                <p>
-                    <button 
-                        className="btn btn-primary" 
-                        type="button" 
-                        data-toggle="collapse" data-target={ "#book" + this.state.id } aria-expanded="false" aria-controls={ "book" + this.state.id } >
-                        Edit
-                    </button>
-                </p>
+            <div className="favorite-child-btn">
+                <button 
+                    className="btn btn-primary fav-child-btn" 
+                    type="button" 
+                    data-toggle="collapse" data-target={ "#book" + this.state.id } aria-expanded="false" aria-controls={ "book" + this.state.id } >
+                    Edit
+                </button>
+            
                 <div 
                 className="collapse"   id={ "book" + this.state.id } >
                     <div className="card card-body">
