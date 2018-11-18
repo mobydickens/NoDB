@@ -36,7 +36,7 @@ module.exports = {
             author: author,
             genre: genre,
             recommended: recommended,
-            id: id
+            id: Number(id)
         }
         res.status(200).send(userBooklist);
     }

@@ -47,6 +47,7 @@ class App extends Component {
   }
 
   editBook = (edited) => {
+    console.log("is it calling?", edited);
     this.setState({
       userBooklist: edited
     })

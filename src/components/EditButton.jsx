@@ -34,13 +34,13 @@ class EditButton extends Component {
 
 
     editBook = () => {
-        axios.put('/userbooks/:id', this.state).then(res => {
+        axios.put(`/userbooks/${this.state.id}`, this.state).then(res => {
             this.props.editBookFn(res.data)
         })
     }
 
     render() {
-        console.log(this.state);
+        // console.log(this.state);
         return(
             <div>
                 <p>
@@ -56,19 +56,19 @@ class EditButton extends Component {
                     <div className="card card-body">
                         <input 
                             type="text"
-                            value={ this.state.title }
+                            value={ this.state.title || ""}
                             onChange={ (e) => this.setState({ title: e.target.value }) } />
                         <input 
                             type="text" 
-                            value={ this.state.author }
+                            value={ this.state.author || ""}
                             onChange={ (e) => this.setState({ author: e.target.value }) } />
                         <input 
                             type="text" 
-                            value={ this.state.genre }
+                            value={ this.state.genre || ""}
                             onChange={ (e) => this.setState({ genre: e.target.value })} />
                         <input 
                             type="text" 
-                            value={ this.state.recommended }
+                            value={ this.state.recommended || ""}
                             onChange={ (e) => this.setState({ recommended: e.target.value || "" })} />
                         <button onClick={ () => this.editBook() }>Save</button>
                     </div>
