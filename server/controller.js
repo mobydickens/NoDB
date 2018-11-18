@@ -31,7 +31,7 @@ module.exports = {
         let bookIndex = userBooklist.findIndex(book => {
             return book.id === Number(id);
         })
-        book[bookIndex] = {
+        userBooklist[bookIndex] = {
             title: title,
             author: author,
             genre: genre,

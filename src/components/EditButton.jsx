@@ -1,6 +1,6 @@
 //child of FAVORITES
 import React, { Component } from 'react';
-import DropdownBtn from './DropdownBtn.jsx';
+// import DropdownBtn from './DropdownBtn.jsx';
 import axios from 'axios';
 
 class EditButton extends Component {
@@ -13,6 +13,22 @@ class EditButton extends Component {
             recommended: this.props.recommended,
             id: this.props.id
         }
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.title !== prevProps.title 
+                || this.props.author !== prevProps.author
+                || this.props.genre !== prevProps.genre
+                || this.props.recommended !== prevProps.recommended
+                ) {
+            this.setState({
+                title: this.props.title,
+                author: this.props.author,
+                genre: this.props.genre,
+                recommended: this.props.recommended,
+                id: this.props.id
+            })
+          }
     }
 
 
@@ -31,28 +47,28 @@ class EditButton extends Component {
                     <button 
                         className="btn btn-primary" 
                         type="button" 
-                        data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        data-toggle="collapse" data-target={ "#book" + this.state.id } aria-expanded="false" aria-controls={ "book" + this.state.id } >
                         Edit
                     </button>
                 </p>
                 <div 
-                className="collapse"   id="collapseExample">
+                className="collapse"   id={ "book" + this.state.id } >
                     <div className="card card-body">
                         <input 
-                            type="text" 
-                            value={ this.props.title }
+                            type="text"
+                            value={ this.state.title }
                             onChange={ (e) => this.setState({ title: e.target.value }) } />
                         <input 
                             type="text" 
-                            value={ this.props.author }
+                            value={ this.state.author }
                             onChange={ (e) => this.setState({ author: e.target.value }) } />
                         <input 
                             type="text" 
-                            value={ this.props.genre }
+                            value={ this.state.genre }
                             onChange={ (e) => this.setState({ genre: e.target.value })} />
                         <input 
                             type="text" 
-                            value={ this.props.recommended }
+                            value={ this.state.recommended }
                             onChange={ (e) => this.setState({ recommended: e.target.value || "" })} />
                         <button onClick={ () => this.editBook() }>Save</button>
                     </div>
