@@ -13,9 +13,9 @@ function Recommendations(props) {
       <div className="container">
         <div className="rec-title">
             <h1 className="title new-reads">New Reads</h1>
-            <h4 className="subtitle">
+            <div className="subtitle">
                 A better place find and save your to-read books
-            </h4>
+            </div>
         </div>
         <main className="rec-box-parent">
             <div className="rec-box">{recommendations}</div>

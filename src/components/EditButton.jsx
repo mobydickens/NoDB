@@ -24,41 +24,49 @@ class EditButton extends Component {
     render() {
         // console.log(this.state);
         return(
+        <div>
             <div className="favorite-child-btn">
-                <button 
-                    className="btn btn-primary fav-child-btn" 
+               <button 
                     type="button" 
-                    data-toggle="collapse" data-target={ "#book" + this.state.id } aria-expanded="false" aria-controls={ "book" + this.state.id } >
+                    class="btn btn-primary fav-child-btn" 
+                    data-toggle="modal" 
+                    data-target={ "#book" + this.state.id }>
                     Edit
                 </button>
+            </div>
             
                 <div 
-                className="collapse"   id={ "book" + this.state.id } >
-                    <div className="card card-body">
-                        <input 
-                            type="text"
-                            value={ this.state.title || ""}
-                            onChange={ (e) => this.setState({ title: e.target.value }) } />
-                        <input 
-                            type="text" 
-                            value={ this.state.author || ""}
-                            onChange={ (e) => this.setState({ author: e.target.value }) } />
-                        <input 
-                            type="text" 
-                            value={ this.state.genre || ""}
-                            onChange={ (e) => this.setState({ genre: e.target.value })} />
-                        <input 
-                            type="text" 
-                            value={ this.state.recommended || ""}
-                            onChange={ (e) => this.setState({ recommended: e.target.value || "" })} />
-                        <button onClick={ () => this.editBook() }>Save</button>
+                    class="modal fade"
+                    id={ "book" + this.state.id }
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="exampleModalCenterTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                        </div>
                     </div>
-                </div> 
+                </div>
             </div>
         )
     }
 }
 
 export default EditButton;
+                  
+                
 
-//axios call here? Edit would call the BOOK, edit, return RES and send WHOLE response up the chain. 
+

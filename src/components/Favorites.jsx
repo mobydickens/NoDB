@@ -11,11 +11,19 @@ class Favorites extends Component {
             //need to check if list is EMPTY, and return a prompt if so (maybe a button to take you to the AddBook Page)
             return(
                 <div className="book" key={book.id}>
-                    <div>{book.title}</div><br/>
-                     by 
-                    <div>{book.author}</div>
-                    {!book.genre ? "" : <div>{book.genre}</div>}
-                    {!book.recommended ? "" : <div>Recommended by: {book.recommended}</div>}
+                    <div className="text-box">
+                        <div 
+                            className="title">
+                            {book.title}
+                        </div><br/>
+                        by 
+                        <div
+                            className="author">
+                            {book.author}
+                        </div>
+                        {!book.genre ? "" : <div className="genre">{book.genre}</div>}
+                        {!book.recommended ? "" : <div className="rec">Recommended by:<br/> {book.recommended}</div>}
+                    </div>
                     <div className="favorite-btn">
                         <DeleteBtn 
                             deleteBookFn={ this.props.deleteBookFn}
@@ -32,8 +40,7 @@ class Favorites extends Component {
 
         return ( 
         <div className="container">
-            <h3>Favorites</h3>
-            <h5>To read</h5>
+            <div className="subtitle">To-read books in favorites</div>
             <div className="book-parent">
                 {book}
             </div>

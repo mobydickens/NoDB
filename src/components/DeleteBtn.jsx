@@ -15,7 +15,7 @@ class DeleteBtn extends Component {
     }
     render() {
     return(
-        <div className="favorite-child-btn">
+        <div className="favorite-child-btn one">
             <button 
                 className="btn btn-primary fav-child-btn" 
                 type="button"

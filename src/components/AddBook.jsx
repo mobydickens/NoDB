@@ -36,25 +36,28 @@ class AddBook extends Component {
     return (
       <div className="container">
         <main className="add-parent">
-            <div>Add a book to read in Favorites</div><br/>
+            <div className="subtitle">Add a new book to read in your Favorites</div><br/>
             <input 
                 type="text" 
+                className="form-control"
                 placeholder="Title"
                 value={ this.state.title } 
                 onChange={ (e) => this.setState({ title: e.target.value })} />
             <input 
                 type="text" 
+                className="form-control"
                 placeholder="Author"
                 value={ this.state.author } 
                 onChange={ (e) => this.setState({ author: e.target.value })} />
             <DropdownBtn genrePickerFn={ this.genrePicker } />
             <input 
                 type="text"
+                className="form-control"
                 placeholder="Recommended by"
                 value={ this.state.recommended }  
                 onChange={ (e) => this.setState({ recommended: e.target.value })} /><br/>
-            <button onClick={ () => this.getBook()} > Add </button>
-            {/* <button onClick={  }>Take me to favorites</button> */}
+            <button className="btn btn-primary" onClick={ () => this.getBook()} > Add </button>
+            <div>Word of the Day</div>
         </main>
       </div>
     );
