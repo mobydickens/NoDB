@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 import DropdownBtn from './DropdownBtn.jsx';
+// import axios from 'axios';
 
 //Completes ONE stateful component
 class AddBook extends Component {
@@ -57,7 +58,7 @@ class AddBook extends Component {
                 value={ this.state.recommended }  
                 onChange={ (e) => this.setState({ recommended: e.target.value })} /><br/>
             <button className="btn btn-primary" onClick={ () => this.getBook()} > Add </button>
-            <div>Word of the Day</div>
+            <div className="dictionary-title">Word of the Day</div>
         </main>
       </div>
     );

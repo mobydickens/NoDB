@@ -3,6 +3,7 @@ var parseString = require('xml2js').parseString;
 let defaultBooklist = require('./defaultBooklist');
 let userBooklist = require('./userBooklist');
 let id = 60;
+const config = require('./../config.js');
 
 module.exports = {
     //GET
@@ -18,7 +19,7 @@ module.exports = {
             return book.id === Number(id);
         })
         let book = userBooklist[bookIndex];
-        axios.get(`https://www.goodreads.com/search/index.xml?key=s9gBzAhTXXnbYHatjjHcpg&q=${book.title.replace(/ /g,"%20")}&search=title`)
+        axios.get(`https://www.goodreads.com/search/index.xml?key=${config.coverKey}&q=${book.title.replace(/ /g,"%20")}&search=title`)
             .then(resp => {
                 return new Promise((resolve, reject) => {
                     let xml = resp.data;
@@ -37,6 +38,7 @@ module.exports = {
                 res.status(500).send(e) 
             })
     },
+
     //POST - will take in req.body
     addUserBook: (req, res) => {
         const { title, author, genre, recommended } = req.body
