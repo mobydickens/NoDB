@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DropdownBtn from './DropdownBtn.jsx';
 import axios from 'axios';
+import toastr from 'toastr';
 
 //Completes ONE stateful component
 class AddBook extends Component {
@@ -47,7 +48,7 @@ componentDidMount() {
     return (
       <div className="container">
         <main className="add-parent">
-            <div className="subtitle">Add a new book to read in your Favorites</div><br/>
+            <div className="subtitle">Add a book to your to-read list!</div><br/>
             <input 
                 type="text" 
                 className="form-control"

@@ -7,17 +7,13 @@ function Recommendations(props) {
         if(book.tags.includes("Classics")) {
             return(
                 <div key={book.id} className="mini-book">
-                    <a 
-                        tabIndex="0" 
-                        className="btn btn-lg rec-book-title"
-                        role="button" 
-                        data-toggle="popover" 
-                        data-trigger="focus" 
-                        title="Add book to favorites?" 
-                        data-content="And here's some amazing content. It's very engaging. Right?">
-                        {book.title}
-                    </a>
+                    <div>{ book.title }</div>
                     <div className="rec-author">by {book.author}</div>
+                    <a 
+                        href="#" 
+                        className="badge badge-dark"
+                        onClick={ () => props.addBookFn(book) }
+                    >Add</a>
                 </div>
             )
         }
@@ -27,17 +23,13 @@ function Recommendations(props) {
         if(book.tags.includes("Science Fiction")) {
             return(
                 <div key={book.id} className="mini-book">
-                    <a 
-                        tabIndex="0" 
-                        className="btn btn-lg rec-book-title"
-                        role="button" 
-                        data-toggle="popover" 
-                        data-trigger="focus" 
-                        title="Add book to favorites?" 
-                        data-content="some data">
-                        {book.title}
-                    </a>
+                    <div>{ book.title }</div>
                     <div className="rec-author">by {book.author}</div>
+                    <a 
+                        href="#" 
+                        className="badge badge-dark"
+                        onClick={ () => props.addBookFn(book) }
+                    >Add</a>
                 </div>
             )
         }
@@ -47,17 +39,13 @@ function Recommendations(props) {
         if(book.tags.includes("History")) {
             return(
                 <div key={book.id} className="mini-book">
-                    <a 
-                        tabIndex="0" 
-                        className="btn btn-lg rec-book-title"
-                        role="button" 
-                        data-toggle="popover" 
-                        data-trigger="focus" 
-                        title="Add book to favorites?" 
-                        data-content="And here's some amazing content. It's very engaging. Right?">
-                        {book.title}
-                    </a>
+                    <div>{ book.title }</div>
                     <div className="rec-author">by {book.author}</div>
+                    <a 
+                        href="#" 
+                        className="badge badge-dark"
+                        onClick={ () => props.addBookFn(book) }
+                    >Add</a>
                 </div>
             )
         }
@@ -66,9 +54,9 @@ function Recommendations(props) {
     return (
       <div className="container">
         <div className="rec-title">
-            <h1 className="title new-reads">New Reads</h1>
-            <div className="subtitle">
-                A better place find and save your to-read books
+            <h1 className="new-reads">New Reads</h1>
+            <div className="subtitle main-subtitle">
+                A place to save your to-read books
             </div>
         </div>
         <main className="rec-box-parent">
@@ -88,7 +76,7 @@ function Recommendations(props) {
         <div className="rec-button-parent">
             <button 
                 type="button" 
-                className="btn btn-secondary"
+                className="btn btn-secondary main-button"
                 onClick={ () => props.handleChange() }>
                 Click to add your own book to favorites!
             </button>

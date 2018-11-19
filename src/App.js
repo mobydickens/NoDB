@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import toastr from 'toastr';
 import Recommendations from './components/Recommendations.jsx';
 import AddBook from './components/AddBook.jsx';
 import Favorites from './components/Favorites.jsx';
@@ -55,7 +56,7 @@ class App extends Component {
         //need to add a check to see if book is already in 'favorites list'
         //need to add check to see if any input boxes are empty
         // console.log("axios response", res)
-        alert("your book has been added!");
+        toastr.success('Success!', 'Your book has been added to your to-read list');
         this.setState({
           userBooklist: res.data
         })
@@ -129,6 +130,7 @@ class App extends Component {
           ? <Recommendations 
               default={ this.state.default }
               handleChange={ this.handleChangeAdd }
+              addBookFn={ this.addBook }
             /> : null }
         {this.state.route === "Add new book" 
           ? <AddBook 
