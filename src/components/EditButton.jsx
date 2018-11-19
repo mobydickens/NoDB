@@ -23,21 +23,21 @@ class EditButton extends Component {
 
     render() {
         // console.log(this.state);
-        return(
-        <div>
-            <div className="favorite-child-btn">
-               <button 
-                    type="button" 
-                    className="btn btn-primary fav-child-btn" 
-                    data-toggle="modal" 
-                    data-target={ "#book" + this.state.id }>
-                    Edit
+        return (
+            <div>
+                <div className="favorite-child-btn">
+                    <button
+                        type="button"
+                        className="btn btn-primary fav-child-btn"
+                        data-toggle="modal"
+                        data-target={"#book" + this.state.id}>
+                        Edit
                 </button>
-            </div>
-            
-                <div 
+                </div>
+
+                <div
                     className="modal fade"
-                    id={ "book" + this.state.id }
+                    id={"book" + this.state.id}
                     tabIndex="-1"
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"
@@ -45,61 +45,59 @@ class EditButton extends Component {
                     <div className="modal-dialog modal-dialog-centered" role="document">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                <h5 className="modal-title" id="exampleModalCenterTitle">Edit Book</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                <div className="modal-body">
-                    <div className="card card-body" id={ "book" + this.state.id }>
+                            <div className="modal-body">
+                                <div className="card card-body" id={"book" + this.state.id}>
 
-                        <div className="form-group">
-                            <label htmlFor="edit">Title</label>
-                            <input 
-                                className="form-control"
-                                type="text"
-                                value={ this.state.title || ""}
-                                onChange={ (e) => this.setState({ title: e.target.value }) } />
+                                    <div className="form-group">
+                                        <label htmlFor="edit">Title</label>
+                                        <input
+                                            className="form-control"
+                                            type="text"
+                                            value={this.state.title || ""}
+                                            onChange={(e) => this.setState({ title: e.target.value })} />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label htmlFor="edit1">Author</label>
+                                        <input
+                                            className="form-control"
+                                            type="text"
+                                            value={this.state.author || ""}
+                                            onChange={(e) => this.setState({ author: e.target.value })} />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label htmlFor="edit2">Genre</label>
+                                        <input
+                                            className="form-control"
+                                            type="text"
+                                            value={this.state.genre || ""}
+                                            onChange={(e) => this.setState({ genre: e.target.value })} />
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label htmlFor="edit3">Recommended by</label>
+                                        <input
+                                            className="form-control"
+                                            type="text"
+                                            value={this.state.recommended || ""}
+                                            onChange={(e) => this.setState({ recommended: e.target.value || "" })} />
+                                    </div>
+                                    <button
+                                        className="btn btn-primary"
+                                        data-dismiss="modal"
+                                        onClick={() => this.editBook()}>
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div className="form-group">
-                            <label htmlFor="edit1">Author</label>
-                            <input 
-                                className="form-control"
-                                type="text" 
-                                value={ this.state.author || ""}
-                                onChange={ (e) => this.setState({ author: e.target.value }) } />
-                        </div>
-                        
-                        <div className="form-group">
-                            <label htmlFor="edit2">Genre</label>
-                            <input 
-                                className="form-control"
-                                type="text" 
-                                value={ this.state.genre || ""}
-                                onChange={ (e) => this.setState({ genre: e.target.value })} />
-                        </div>
-                        
-                        <div className="form-group">
-                            <label htmlFor="edit3">Recommended by</label>
-                            <input 
-                                className="form-control"
-                                type="text" 
-                                value={ this.state.recommended || ""}
-                                onChange={ (e) => this.setState({ recommended: e.target.value || "" })} />
-                        </div>
-                        <button
-                            className="btn btn-secondary" 
-                            onClick={ () => this.editBook() }>
-                            Save
-                        </button>
-                    </div>
-                </div>
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Save changes</button>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -108,7 +106,7 @@ class EditButton extends Component {
 }
 
 export default EditButton;
-                  
-                
+
+
 
 
