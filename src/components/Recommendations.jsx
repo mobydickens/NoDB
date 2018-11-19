@@ -3,11 +3,39 @@ import React from 'react';
 //Completes one stateless functional component
 function Recommendations(props) {
 
-    const recommendations = props.default.map(book => {
-        return(
-            <div key={book.id}>{book.title}</div>
-        )
+    const classicRecommendations = props.default.map(book => {
+        if(book.tags.includes("Classics")) {
+            return(
+                <div className="mini-book">
+                    <div key={book.id} className="rec-book-title">{book.title}</div>
+                    <div className="rec-author">by {book.author}</div>
+                </div>
+            )
+        }
     })
+
+    const SciFiRecommendatons = props.default.map(book => {
+        if(book.tags.includes("Science Fiction")) {
+            return(
+                <div className="mini-book">
+                    <div key={book.id} className="rec-book-title">{book.title}</div>
+                    <div className="rec-author">by {book.author}</div>
+                </div>
+            )
+        }
+    })
+
+    const historyRecommendations = props.default.map(book => {
+        if(book.tags.includes("History")) {
+            return(
+                <div className="mini-book">
+                    <div key={book.id} className="rec-book-title">{book.title}</div>
+                    <div className="rec-author">by {book.author}</div>
+                </div>
+            )
+        }
+    })
+    
 
     return (
       <div className="container">
@@ -18,9 +46,9 @@ function Recommendations(props) {
             </div>
         </div>
         <main className="rec-box-parent">
-            <div className="rec-box">{recommendations}</div>
-            <div className="rec-box">{}</div>
-            <div className="rec-box">{}</div>
+            <div className="rec-box">{classicRecommendations}</div>
+            <div className="rec-box">{SciFiRecommendatons}</div>
+            <div className="rec-box">{historyRecommendations}</div>
         </main>
         <div className="rec-button-parent">
             <button 

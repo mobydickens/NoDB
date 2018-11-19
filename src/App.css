@@ -41,12 +41,23 @@ nav {
 .rec-box {
   border: 1px solid #D9D9D9;
   margin: 20px;
+  padding: 15px;
   width: 300px;
   height: 500px;
+  overflow: scroll;
 }
 .rec-button-parent {
   display: flex;
   justify-content: center;
+}
+.mini-book {
+  margin: 10px;
+}
+.rec-book-title {
+  font-size: 15px;
+}
+.rec-author {
+  font-size: 10px;
 }
 
 /* AddBook component */
