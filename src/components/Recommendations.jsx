@@ -13,7 +13,7 @@ function Recommendations(props) {
                         role="button" 
                         data-toggle="popover" 
                         data-trigger="focus" 
-                        title="Dismissible popover" 
+                        title="Add book to favorites?" 
                         data-content="And here's some amazing content. It's very engaging. Right?">
                         {book.title}
                     </a>
@@ -33,8 +33,8 @@ function Recommendations(props) {
                         role="button" 
                         data-toggle="popover" 
                         data-trigger="focus" 
-                        title="Dismissible popover" 
-                        data-content="And here's some amazing content. It's very engaging. Right?">
+                        title="Add book to favorites?" 
+                        data-content="some data">
                         {book.title}
                     </a>
                     <div className="rec-author">by {book.author}</div>
@@ -53,7 +53,7 @@ function Recommendations(props) {
                         role="button" 
                         data-toggle="popover" 
                         data-trigger="focus" 
-                        title="Dismissible popover" 
+                        title="Add book to favorites?" 
                         data-content="And here's some amazing content. It's very engaging. Right?">
                         {book.title}
                     </a>
