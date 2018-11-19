@@ -29,7 +29,7 @@ nav {
   text-align: center;
   font-size: 20px;
   margin: 45px 0 30px 0;
-  font-family: 'Bad Script', cursive
+  font-family: 'Bad Script', cursive;
 }
 /* Recommendations component */
 .rec-box-parent {
@@ -54,10 +54,28 @@ nav {
   margin: 10px;
 }
 .rec-book-title {
+  background-color: none;
+  border: none;
+  padding: 0;
   font-size: 15px;
+  color: black;
 }
 .rec-author {
   font-size: 10px;
+  color: #808080;
+}
+
+.browse {
+  font-family: 'Bad Script', cursive;
+  font-size: 25px;
+  border-bottom: .5px solid grey;
+}
+
+.badge {
+  width: 30px;
+  height: 10px;
+  font-size: 8px;
+  padding: 0px;
 }
 
 /* AddBook component */

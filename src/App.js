@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      route: "Favorites",
+      route: "Recommendations",
       default: [],
       userBooklist: [],
       activeButton: "rec"
@@ -74,6 +74,20 @@ class App extends Component {
     })
   }
 
+  handleChangeRecommendations = () => {
+    this.setState({ 
+      route: "Recommendations",
+      activeButton: "rec"
+      })
+  }
+  
+  handleChangeAdd = () => {
+    this.setState({ 
+      route: "Add new book",
+      activeButton: "add"
+      })
+  }
+
   render() {
     return (
       <div >
@@ -87,10 +101,7 @@ class App extends Component {
               className={ this.state.activeButton === "rec" 
                 ? "btn btn-primary nav-button active" 
                 : "btn btn-primary nav-button"}
-              onClick={ (e) => this.setState({ 
-                route: "Recommendations",
-                activeButton: "rec"
-                }) }>
+              onClick={ () => this.handleChangeRecommendations() }>
               Recommendations
             </button>
             <button
@@ -98,10 +109,7 @@ class App extends Component {
               className={this.state.activeButton === "add" 
               ? "btn btn-primary nav-button active" 
               : "btn btn-primary nav-button"}
-              onClick={ () => this.setState({ 
-                route: "Add new book",
-                activeButton: "add"
-                }) }>
+              onClick={ () =>  this.handleChangeAdd() }>
               Add new book
             </button>
             <button
@@ -119,7 +127,8 @@ class App extends Component {
         </nav>
         {this.state.route === "Recommendations" 
           ? <Recommendations 
-              default={ this.state.default } 
+              default={ this.state.default }
+              handleChange={ this.handleChangeAdd }
             /> : null }
         {this.state.route === "Add new book" 
           ? <AddBook 

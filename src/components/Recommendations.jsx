@@ -6,8 +6,17 @@ function Recommendations(props) {
     const classicRecommendations = props.default.map(book => {
         if(book.tags.includes("Classics")) {
             return(
-                <div className="mini-book">
-                    <div key={book.id} className="rec-book-title">{book.title}</div>
+                <div key={book.id} className="mini-book">
+                    <a 
+                        tabIndex="0" 
+                        className="btn btn-lg rec-book-title"
+                        role="button" 
+                        data-toggle="popover" 
+                        data-trigger="focus" 
+                        title="Dismissible popover" 
+                        data-content="And here's some amazing content. It's very engaging. Right?">
+                        {book.title}
+                    </a>
                     <div className="rec-author">by {book.author}</div>
                 </div>
             )
@@ -17,8 +26,17 @@ function Recommendations(props) {
     const SciFiRecommendatons = props.default.map(book => {
         if(book.tags.includes("Science Fiction")) {
             return(
-                <div className="mini-book">
-                    <div key={book.id} className="rec-book-title">{book.title}</div>
+                <div key={book.id} className="mini-book">
+                    <a 
+                        tabIndex="0" 
+                        className="btn btn-lg rec-book-title"
+                        role="button" 
+                        data-toggle="popover" 
+                        data-trigger="focus" 
+                        title="Dismissible popover" 
+                        data-content="And here's some amazing content. It's very engaging. Right?">
+                        {book.title}
+                    </a>
                     <div className="rec-author">by {book.author}</div>
                 </div>
             )
@@ -28,15 +46,23 @@ function Recommendations(props) {
     const historyRecommendations = props.default.map(book => {
         if(book.tags.includes("History")) {
             return(
-                <div className="mini-book">
-                    <div key={book.id} className="rec-book-title">{book.title}</div>
+                <div key={book.id} className="mini-book">
+                    <a 
+                        tabIndex="0" 
+                        className="btn btn-lg rec-book-title"
+                        role="button" 
+                        data-toggle="popover" 
+                        data-trigger="focus" 
+                        title="Dismissible popover" 
+                        data-content="And here's some amazing content. It's very engaging. Right?">
+                        {book.title}
+                    </a>
                     <div className="rec-author">by {book.author}</div>
                 </div>
             )
         }
     })
     
-
     return (
       <div className="container">
         <div className="rec-title">
@@ -46,14 +72,24 @@ function Recommendations(props) {
             </div>
         </div>
         <main className="rec-box-parent">
-            <div className="rec-box">{classicRecommendations}</div>
-            <div className="rec-box">{SciFiRecommendatons}</div>
-            <div className="rec-box">{historyRecommendations}</div>
+            <div className="rec-box">
+                <div className="browse">Browse Classics</div>
+                {classicRecommendations}
+            </div>
+            <div className="rec-box">
+                <div className="browse">Browse Science Fiction</div>
+                {SciFiRecommendatons}
+            </div>
+            <div className="rec-box">
+                <div className="browse">Browse History</div>
+                {historyRecommendations}
+            </div>
         </main>
         <div className="rec-button-parent">
             <button 
                 type="button" 
-                className="btn btn-secondary">
+                className="btn btn-secondary"
+                onClick={ () => props.handleChange() }>
                 Click to add your own book to favorites!
             </button>
         </div>
