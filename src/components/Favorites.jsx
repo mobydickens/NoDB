@@ -10,7 +10,12 @@ class Favorites extends Component {
         const book = this.props.userBooklist.map(book => {
             //need to check if list is EMPTY, and return a prompt if so (maybe a button to take you to the AddBook Page)
             return(
-                <div className="book" key={book.id}>
+                <div className="book" style={{ backgroundImage: "url(/covers/" + book.id + ")"}} key={book.id}>
+                    <div className="cover-img">
+                        <div className="cover" style={{ backgroundImage: "url(/covers/" + book.id + ")"}} >
+                        </div>
+                        <div className="cover2"/>
+                    </div>
                     <div className="text-box">
                         <div 
                             className="title">

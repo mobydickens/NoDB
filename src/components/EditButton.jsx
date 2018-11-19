@@ -28,7 +28,7 @@ class EditButton extends Component {
             <div className="favorite-child-btn">
                <button 
                     type="button" 
-                    class="btn btn-primary fav-child-btn" 
+                    className="btn btn-primary fav-child-btn" 
                     data-toggle="modal" 
                     data-target={ "#book" + this.state.id }>
                     Edit
@@ -38,7 +38,7 @@ class EditButton extends Component {
                 <div 
                     className="modal fade"
                     id={ "book" + this.state.id }
-                    tabindex="-1"
+                    tabIndex="-1"
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"
                     aria-hidden="true">
@@ -81,7 +81,7 @@ class EditButton extends Component {
                         </div>
                         
                         <div className="form-group">
-                            <label htmlFor="edit3">Recommended by...</label>
+                            <label htmlFor="edit3">Recommended by</label>
                             <input 
                                 className="form-control"
                                 type="text" 

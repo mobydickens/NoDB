@@ -1,3 +1,5 @@
+let axios = require('axios');
+var parseString = require('xml2js').parseString;
 let defaultBooklist = require('./defaultBooklist');
 let userBooklist = require('./userBooklist');
 let id = 60;
@@ -9,6 +11,31 @@ module.exports = {
     },
     userBooklist: (req, res) => {
         res.status(200).send(userBooklist);
+    },
+    getCover: (req, res) => {
+        let { id } = req.params;
+        let bookIndex = userBooklist.findIndex(book => {
+            return book.id === Number(id);
+        })
+        let book = userBooklist[bookIndex];
+        axios.get(`https://www.goodreads.com/search/index.xml?key=s9gBzAhTXXnbYHatjjHcpg&q=${book.title.replace(/ /g,"%20")}&search=title`)
+            .then(resp => {
+                return new Promise((resolve, reject) => {
+                    let xml = resp.data;
+                    parseString(xml, function (err, result) {
+                        if(err !== null) {
+                            return reject(err);
+                        }
+                        resolve(result);
+                    });
+                })
+            }).then(result => {
+                let img = result.GoodreadsResponse.search[0].results[0].work[0].best_book[0].image_url[0];
+                res.redirect(302, img);
+            }).catch(e => { 
+                console.log(e);
+                res.status(500).send(e) 
+            })
     },
     //POST - will take in req.body
     addUserBook: (req, res) => {
