@@ -54,7 +54,7 @@ class Favorites extends Component {
             <div className="container">
                 <div className="subtitle">To-read books in favorites</div>
                 <div className="book-parent">
-                    {book}
+                    {book.reverse()}
                 </div>
             </div>
         );

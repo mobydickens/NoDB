@@ -27,8 +27,11 @@ class App extends Component {
     axios.get('/userbooks')
   ])
     .then(axios.spread(function(books, userbooks) {
+      let original = books.data.filter(book => {
+        return book.original === true;
+      })
       that.setState({
-          default: books.data,
+          default: original,
           userBooklist: userbooks.data
       })
     }))
@@ -59,7 +62,6 @@ class App extends Component {
         // need to add a check to see if book is already in 'favorites list'
         // need to add check to see if any input boxes are empty
         toastr.options.positionClass = "toast-bottom-right";
-        console.log("axios response", res)
         toastr.success(`${book.title} has been added to your to-read list`, "Success!");
         this.setState({
           userBooklist: res.data

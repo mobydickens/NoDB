@@ -10,11 +10,9 @@ var throttle = require('promise-ratelimit')(1001);
 module.exports = {
     //GET
     defaultList: (req, res) => {
-        console.log("is default get working?")
         res.status(200).send(defaultBooklist);
     },
     userBooklist: (req, res) => {
-        console.log("is favorites get working?")
         let favorites = defaultBooklist.filter(book => book.favorites === true);
         res.status(200).send(favorites);
     },
@@ -26,13 +24,11 @@ module.exports = {
         let book = defaultBooklist[bookIndex];
 
         if(imageDictionary[book.title]) {
-            console.log(`Already found image for book ${book.title}! Skipping request...`);
             res.redirect(302, imageDictionary[book.title]);
             return;
         }
         return;
         throttle().then( () => {
-            console.log(`Looking up image for book ${book.title}...`);
             axios.get(`https://www.goodreads.com/search/index.xml?key=${config.coverKey}&q=${book.title.replace(/ /g,"%20")}&search=title`)
                 .then(resp => {
                     return new Promise((resolve, reject) => {
