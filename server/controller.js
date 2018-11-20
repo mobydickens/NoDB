@@ -27,7 +27,6 @@ module.exports = {
             res.redirect(302, imageDictionary[book.title]);
             return;
         }
-        return;
         throttle().then( () => {
             axios.get(`https://www.goodreads.com/search/index.xml?key=${config.coverKey}&q=${book.title.replace(/ /g,"%20")}&search=title`)
                 .then(resp => {

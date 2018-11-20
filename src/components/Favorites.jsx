@@ -10,19 +10,7 @@ class Favorites extends Component {
         const book = this.props.userBooklist.map(book => {
             //need to check if list is EMPTY, and return a prompt if so (maybe a button to take you to the AddBook Page)
             return(
-                <div 
-                    className="book" 
-                    // style={{ backgroundImage: "url(/covers/" + book.id + ")"}} 
-                    key={book.id}>
-                    <div 
-                        className="cover-img">
-                        <div 
-                            className="cover" 
-                            // style={{ backgroundImage: "url(/covers/" + book.id + ")"}}
-                            >
-                        </div>
-                        <div className="cover2"/>
-                    </div>
+                <div key={book.id} className="parentforfav">
                     <div className="text-box">
                         <div 
                             className="title">
@@ -33,8 +21,10 @@ class Favorites extends Component {
                             className="author">
                             {book.author}
                         </div>
-                        {!book.genre ? "" : <div className="genre">{book.genre}</div>}
-                        {!book.recommended ? "" : <div className="rec">Recommended by:<br/> {book.recommended}</div>}
+                            {!book.genre ? "" : <div className="genre">{book.genre}</div>}
+                            {!book.recommended ? "" : <div className="rec">Recommended by:<br/> {book.recommended}
+                        </div>}
+                    
                     </div>
                     <div className="favorite-btn">
                         <DeleteBtn 
@@ -46,6 +36,11 @@ class Favorites extends Component {
                             recommended={ book.recommended }
                             id={ book.id }
                             editBookFn={ this.props.editBookFn }/>
+                    </div>
+                    <div 
+                        className="book"
+                        style={{ backgroundImage: "url(/covers/" + book.id + ")"}}>
+                        
                     </div>
                 </div>)
         })

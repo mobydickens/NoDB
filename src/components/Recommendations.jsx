@@ -25,7 +25,7 @@ class Recommendations extends Component {
                 books: books.filter(book => book.tags && book.tags.includes(tagList[i]))
             })
         }
-        return booksByTag.filter(obj => obj.books.length >= 10);
+        return booksByTag.filter(obj => obj.books.length >= 5);
     }
 
     render() { 
@@ -50,11 +50,10 @@ class Recommendations extends Component {
                                             <div className="mini-book">
                                                 <div>{ book.title }</div>
                                                 <div className="rec-author">by {book.author}</div>
-                                                <a 
-                                                    href="#" 
+                                                <button 
                                                     className="badge badge-dark"
                                                     onClick={ () => this.props.addBookFn(book) }>Add
-                                                </a>
+                                                </button>
                                             </div>
                                             <img className="book-img" src={`/covers/${book.id}`} alt={book.id}/>
                                         </div>
