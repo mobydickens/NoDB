@@ -8,7 +8,9 @@ module.exports = [
         genre: "Adventure",
         tags: ["Classics", "Adventure", "Romance"],
         recommended: null,
-        id: 0
+        id: 0,
+        favorites: true,
+        original: true
     },
     {
         title: "Moby Dick",
@@ -16,7 +18,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Classics", "Adventure"],
         recommended: null,
-        id: 1
+        id: 1,
+        favorites: false,
+        original: true
     },
     {
         title: "1984",
@@ -24,7 +28,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction", "Politics", "Dystopia", "Classics"],
         recommended: null,
-        id: 2
+        id: 2,
+        favorites: false,
+        original: true
     },
     {
         title: "Crime and Punishment",
@@ -32,7 +38,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction", "Philosophy", "Classics"],
         recommended: null,
-        id: 3
+        id: 3,
+        favorites: false,
+        original: true
     },
     {
         title: "Frankenstein",
@@ -40,7 +48,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction", "Horror", "Classics"],
         recommended: null,
-        id: 4
+        id: 4,
+        favorites: false,
+        original: true
     },
     {
         title: "A Tale of Two Cities",
@@ -48,7 +58,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Historical Fiction", "Fiction", "Classics"],
         recommended: null,
-        id: 5
+        id: 5,
+        favorites: false,
+        original: true
     },
     {
         title: "The Adventures of Huckleberry Finn",
@@ -56,7 +68,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction", "Adventure", "Classics"],
         recommended: null,
-        id: 6
+        id: 6,
+        favorites: false,
+        original: true
     },
     {
         title: "Jane Eyre",
@@ -64,7 +78,9 @@ module.exports = [
         genre: "Romance",
         tags: ["Romance", "Fiction", "Classics"],
         recommended: null,
-        id: 7
+        id: 7,
+        favorites: false,
+        original: true
     },
     {
         title: "The Picture of Dorian Gray",
@@ -72,7 +88,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction", "Classics"],
         recommended: null,
-        id: 8
+        id: 8,
+        favorites: false,
+        original: true
     },
     {
         title: "The Great Gatsby",
@@ -80,7 +98,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction", "Classics"],
         recommended: null,
-        id: 9
+        id: 9,
+        favorites: false,
+        original: true
     },
     //10 science fiction
     {
@@ -89,7 +109,9 @@ module.exports = [
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
-        id: 10
+        id: 10,
+        favorites: false,
+        original: true
     },
     {
         title: "Dune",
@@ -97,7 +119,9 @@ module.exports = [
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
-        id: 11 
+        id: 11,
+        favorites: false ,
+        original: true
     },
     {
         title: "Red Mars",
@@ -105,7 +129,9 @@ module.exports = [
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
-        id: 12
+        id: 12,
+        favorites: false,
+        original: true
     },
     {
         title: "The Martian",
@@ -113,7 +139,9 @@ module.exports = [
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
-        id: 13
+        id: 13,
+        favorites: false,
+        original: true
     },
     {
         title: "A Hitchhiker's Guide to the Galaxy",
@@ -121,7 +149,9 @@ module.exports = [
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
-        id: 14
+        id: 14,
+        favorites: false,
+        original: true
     },
     {
         title: "Leviathan Wakes",
@@ -129,7 +159,9 @@ module.exports = [
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
-        id: 15
+        id: 15,
+        favorites: false,
+        original: true
     },
     {
         title: "Stranger in a Strange Land",
@@ -137,7 +169,9 @@ module.exports = [
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
-        id: 16
+        id: 16,
+        favorites: false,
+        original: true
     },
     {
         title: "The Time Machine",
@@ -145,7 +179,9 @@ module.exports = [
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
-        id: 17
+        id: 17,
+        favorites: false,
+        original: true
     },
     {
         title: "Brave New World",
@@ -153,7 +189,9 @@ module.exports = [
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
-        id: 18
+        id: 18,
+        favorites: false,
+        original: true
     },
     {
         title: "A Canticle for Leibowitz",
@@ -161,7 +199,9 @@ module.exports = [
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
-        id: 19
+        id: 19,
+        favorites: false,
+        original: true
     },
     //10 fantasy
     {
@@ -170,7 +210,9 @@ module.exports = [
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
-        id:  20  
+        id:  20,
+        favorites: false  ,
+        original: true
     },
     {
         title: "Daughter of the Forest",
@@ -178,7 +220,9 @@ module.exports = [
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
-        id: 21
+        id: 21,
+        favorites: false,
+        original: true
     },
     {
         title: "Game of Thrones",
@@ -186,7 +230,9 @@ module.exports = [
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
-        id: 22
+        id: 22,
+        favorites: false,
+        original: true
     },
     {
         title: "The Book of Flying",
@@ -194,7 +240,9 @@ module.exports = [
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
-        id: 23
+        id: 23,
+        favorites: false,
+        original: true
     },
     {
         title: "The Name of the Wind",
@@ -202,7 +250,9 @@ module.exports = [
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
-        id: 24
+        id: 24,
+        favorites: false,
+        original: true
     },
     {
         title: "The Way of Kings",
@@ -210,7 +260,9 @@ module.exports = [
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
-        id: 25
+        id: 25,
+        favorites: false,
+        original: true
     },
     {
         title: "The Fellowship of the Ring",
@@ -218,7 +270,9 @@ module.exports = [
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
-        id: 26
+        id: 26,
+        favorites: false,
+        original: true
     },
     {
         title: "Dealing with Dragons",
@@ -226,7 +280,9 @@ module.exports = [
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
-        id: 27
+        id: 27,
+        favorites: false,
+        original: true
     },
     {
         title: "Deerskin",
@@ -234,7 +290,9 @@ module.exports = [
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
-        id: 28
+        id: 28,
+        favorites: false,
+        original: true
     },
     {
         title: "The Blade Itself",
@@ -242,7 +300,9 @@ module.exports = [
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
-        id: 29
+        id: 29,
+        favorites: false,
+        original: true
     },
     //
     {
@@ -251,7 +311,9 @@ module.exports = [
         genre: "History",
         tags: ["History"],
         recommended: null,
-        id: 30
+        id: 30,
+        favorites: false,
+        original: true
     },
     {
         title: "Death in Ancient Egypt",
@@ -259,7 +321,9 @@ module.exports = [
         genre: "History",
         tags: ["History"],
         recommended: null,
-        id: 31
+        id: 31,
+        favorites: false,
+        original: true
     },
     {
         title: "History of the Peloponnesian War",
@@ -267,7 +331,9 @@ module.exports = [
         genre: "History",
         tags: ["History"],
         recommended: null,
-        id: 32
+        id: 32,
+        favorites: false,
+        original: true
     },
     {
         title: "A Natural History of Shells",
@@ -275,7 +341,9 @@ module.exports = [
         genre: "History",
         tags: ["History"],
         recommended: null,
-        id: 33
+        id: 33,
+        favorites: false,
+        original: true
     },
     {
         title: "A People's History of the United States",
@@ -283,7 +351,9 @@ module.exports = [
         genre: "History",
         tags: ["History"],
         recommended: null,
-        id: 34
+        id: 34,
+        favorites: false,
+        original: true
     },
     {
         title: "Rats, Lice and History",
@@ -291,7 +361,9 @@ module.exports = [
         genre: "History",
         tags: ["History"],
         recommended: null,
-        id: 35
+        id: 35,
+        favorites: false,
+        original: true
     },
     {
         title: "Easter Island, Earth Island",
@@ -299,7 +371,9 @@ module.exports = [
         genre: "History",
         tags: ["History"],
         recommended: null,
-        id: 36
+        id: 36,
+        favorites: false,
+        original: true
     },
     {
         title: "The Success and Failure of Picasso",
@@ -307,7 +381,9 @@ module.exports = [
         genre: "History",
         tags: ["History"],
         recommended: null,
-        id: 37
+        id: 37,
+        favorites: false,
+        original: true
     },
     {
         title: "Gods, Demons, and Symbols of Ancient Mesopotamia",
@@ -315,7 +391,9 @@ module.exports = [
         genre: "History",
         tags: ["History"],
         recommended: null,
-        id: 38
+        id: 38,
+        favorites: false,
+        original: true
     },
     {
         title: "Mummies, Disease and Ancient Cultures",
@@ -323,7 +401,9 @@ module.exports = [
         genre: "History",
         tags: ["History"],
         recommended: null,
-        id: 39
+        id: 39,
+        favorites: false,
+        original: true
     },
     //Biography
     {
@@ -332,7 +412,9 @@ module.exports = [
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
-        id: 40
+        id: 40,
+        favorites: false,
+        original: true
     },
     {
         title: "The Autobiography of Benjamin Franklin",
@@ -340,7 +422,9 @@ module.exports = [
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
-        id: 41
+        id: 41,
+        favorites: false,
+        original: true
     },
     {
         title: "Judy Garland on Judy Garland: Interviews and Encounters",
@@ -348,7 +432,9 @@ module.exports = [
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
-        id: 42
+        id: 42,
+        favorites: false,
+        original: true
     },
     {
         title: "My Life in Orange: Growing up with the Guru",
@@ -356,7 +442,9 @@ module.exports = [
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
-        id: 43
+        id: 43,
+        favorites: false,
+        original: true
     },
     {
         title: "My Brief History",
@@ -364,7 +452,9 @@ module.exports = [
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
-        id: 44
+        id: 44,
+        favorites: false,
+        original: true
     },
     {
         title: "Speak, Memory",
@@ -372,7 +462,9 @@ module.exports = [
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
-        id: 45
+        id: 45,
+        favorites: false,
+        original: true
     },
     {
         title: "Insomniac Dreams: Experiments with Time",
@@ -380,7 +472,9 @@ module.exports = [
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
-        id: 46
+        id: 46,
+        favorites: false,
+        original: true
     },
     {
         title: "I am Spock",
@@ -388,7 +482,9 @@ module.exports = [
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
-        id: 47
+        id: 47,
+        favorites: false,
+        original: true
     },
     {
         title: "Confessions of an Actor",
@@ -396,7 +492,9 @@ module.exports = [
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
-        id: 48
+        id: 48,
+        favorites: false,
+        original: true
     },
     {
         title: "Growing up Amish",
@@ -404,7 +502,9 @@ module.exports = [
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
-        id: 49
+        id: 49,
+        favorites: false,
+        original: true
     },
     //Fiction
     {
@@ -413,7 +513,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction"],
         recommended: null,
-        id: 50
+        id: 50,
+        favorites: false,
+        original: true
     },
     {
         title: "David Copperfield",
@@ -421,7 +523,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction"],
         recommended: null,
-        id: 51 
+        id: 51,
+        favorites: false ,
+        original: true
     },
     {
         title: "American Psycho",
@@ -429,7 +533,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction"],
         recommended: null,
-        id: 52
+        id: 52,
+        favorites: false,
+        original: true
     },
     {
         title: "The Pillars of the Earth",
@@ -437,7 +543,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction"],
         recommended: null,
-        id: 53
+        id: 53,
+        favorites: false,
+        original: true
     },
     {
         title: "American Gods",
@@ -445,7 +553,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction"],
         recommended: null,
-        id: 54
+        id: 54,
+        favorites: false,
+        original: true
     },
     {
         title: "The Wind in the Willows",
@@ -453,7 +563,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction"],
         recommended: null,
-        id: 55
+        id: 55,
+        favorites: false,
+        original: true
     },
     {
         title: "Red Harvest",
@@ -461,7 +573,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction"],
         recommended: null,
-        id: 56
+        id: 56,
+        favorites: false,
+        original: true
     },
     {
         title: "The Kite Runner",
@@ -469,7 +583,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction"],
         recommended: null,
-        id: 57
+        id: 57,
+        favorites: false,
+        original: true
     },
     {
         title: "Three Men in a Boat",
@@ -477,7 +593,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction"],
         recommended: null,
-        id: 58
+        id: 58,
+        favorites: false,
+        original: true
     },
     {
         title: "Gone with the Wind",
@@ -485,7 +603,9 @@ module.exports = [
         genre: "Fiction",
         tags: ["Fiction"],
         recommended: null,
-        id: 59
+        id: 59,
+        favorites: false,
+        original: true
     },
 ]
 

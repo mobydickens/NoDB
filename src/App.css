@@ -35,6 +35,7 @@ nav {
 .main-subtitle {
   margin-top: 0;
 }
+
 /* Recommendations component */
 .new-reads {
   font-size: 40px;
@@ -122,11 +123,11 @@ nav {
   flex-direction: column;
   align-items: center;
 }
-/* .book-parent {
+.book-parent {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-} */
+}
 .addbook-box {
   padding: 40px 30px;
   width: 400px;

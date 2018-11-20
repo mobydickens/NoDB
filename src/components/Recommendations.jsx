@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 //Completes one stateless functional component
 class Recommendations extends Component {
 
+    //This function was made so I could filter books by tag and print appropriately on the recommendations page
     groupBooksByTag = (books) => {
         //first get all of the tags in default booklist
         let tagList = [];
@@ -24,14 +25,11 @@ class Recommendations extends Component {
                 books: books.filter(book => book.tags && book.tags.includes(tagList[i]))
             })
         }
-        
-       
         return booksByTag.filter(obj => obj.books.length >= 10);
     }
 
     render() { 
         let tags = this.groupBooksByTag(this.props.default);
-
         return (
             <div className="container">
                 <div className="rec-title">
@@ -42,13 +40,13 @@ class Recommendations extends Component {
                 </div>
                 <main className="rec-box-parent">
 
-                    {tags.map(obj => {
+                    {tags.map((obj, i) => {
                         return (
-                            <div className="rec-box">
+                            <div key={i} className="rec-box">
                                 <div className="browse">Browse {obj.tag}</div>
                                     <div className="rec-booklist">
                                     {obj.books.map(book => {
-                                        return (<div className="book-img-parent">
+                                        return (<div key={book.id} className="book-img-parent">
                                             <div className="mini-book">
                                                 <div>{ book.title }</div>
                                                 <div className="rec-author">by {book.author}</div>
@@ -65,9 +63,6 @@ class Recommendations extends Component {
                                 </div>
                             </div>
                         )
-                        // for(let i=0; i<obj.length; i++) {
-
-                        // }
                     })}
                 </main>
                 <div className="rec-button-parent">

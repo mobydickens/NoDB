@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DropdownBtn from './DropdownBtn.jsx';
 import axios from 'axios';
-import toastr from 'toastr';
+// import toastr from 'toastr';
 
 //Completes ONE stateful component
 class AddBook extends Component {

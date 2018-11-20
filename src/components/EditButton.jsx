@@ -1,6 +1,5 @@
 //child of FAVORITES
 import React, { Component } from 'react';
-// import DropdownBtn from './DropdownBtn.jsx';
 import axios from 'axios';
 
 class EditButton extends Component {

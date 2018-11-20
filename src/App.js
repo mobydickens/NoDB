@@ -50,10 +50,12 @@ class App extends Component {
       }
     } 
 
+  //adds book to favorites list either from recommendations or add book page
   addBook = (book) => {
     axios
       .post('/books', book)
       .then(res => {
+
         // need to add a check to see if book is already in 'favorites list'
         // need to add check to see if any input boxes are empty
         toastr.options.positionClass = "toast-bottom-right";
@@ -77,6 +79,7 @@ class App extends Component {
     })
   }
 
+  //these handle page changes and background color on nav buttons
   handleChangeRecommendations = () => {
     this.setState({ 
       route: "Recommendations",

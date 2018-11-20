@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 //endpoints
 app.get('/books', controller.defaultList);
 app.get('/userbooks', controller.userBooklist);
-app.get('/covers/:id', controller.getCover);
+// app.get('/covers/:id', controller.getCover);
 app.post('/books', controller.addUserBook);
 app.put('/userbooks/:id', controller.editUserBook);
 app.delete('/userbooks', controller.deleteUserBook);
