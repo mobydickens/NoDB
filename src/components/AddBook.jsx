@@ -69,11 +69,10 @@ componentDidMount() {
                     placeholder="Recommended by"
                     value={ this.state.recommended }  
                     onChange={ (e) => this.setState({ recommended: e.target.value })} /><br/>
-                <button className="btn btn-primary" onClick={ () => this.getBook()} > Add </button>
+                <button className="btn btn-primary add" onClick={ () => this.getBook()} > Add </button>
             </div>
-            <div className="dictionary-title">Quote of the Day</div>
-            <div>{ this.state.quoteOfTheDay }</div>
-            <div>~ { this.state.authorOfQuote }</div>
+            <div className="quote">{ this.state.quoteOfTheDay }</div>
+            <div className="quote quote-author">~ { this.state.authorOfQuote }</div>
         </main>
       </div>
     );

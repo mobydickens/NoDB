@@ -18,6 +18,7 @@ function DropdownBtn(props) {
                 <option value="Fiction">Fiction</option>
                 <option value="History">History</option>
                 <option value="Historical Fiction">Historical Fiction</option>
+                <option value="Horror">Horror</option>
                 <option value="Non-Fiction">Non-Fiction</option>
                 <option value="Religion">Religion</option>
                 <option value="Romance">Romance</option>
