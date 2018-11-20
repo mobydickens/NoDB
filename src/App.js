@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import toastr from 'toastr';
+import '../node_modules/toastr/build/toastr.css';
 import Recommendations from './components/Recommendations.jsx';
 import AddBook from './components/AddBook.jsx';
 import Favorites from './components/Favorites.jsx';
@@ -53,9 +54,10 @@ class App extends Component {
     axios
       .post('/books', book)
       .then(res => {
-        //need to add a check to see if book is already in 'favorites list'
-        //need to add check to see if any input boxes are empty
-        // console.log("axios response", res)
+        // need to add a check to see if book is already in 'favorites list'
+        // need to add check to see if any input boxes are empty
+        toastr.options.positionClass = "toast-bottom-right";
+        console.log("axios response", res)
         toastr.success('Success!', 'Your book has been added to your to-read list');
         this.setState({
           userBooklist: res.data

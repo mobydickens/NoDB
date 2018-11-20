@@ -42,7 +42,7 @@ module.exports = {
     //POST - will take in req.body
     addUserBook: (req, res) => {
         const { title, author, genre, recommended } = req.body
-        const book = {
+        let book = {
             title: title,
             author: author,
             genre: genre,
@@ -51,8 +51,10 @@ module.exports = {
         }
         id++
         userBooklist.push(book);
-        res.status(200).send(userBooklist);
+        console.log(userBooklist)
+        res.status(200).send(userBooklist);   
     },
+
     //PUT - expects param id and body
     editUserBook: (req, res) => {
         let { id } = req.params;
