@@ -12,13 +12,13 @@ class Favorites extends Component {
             return(
                 <div 
                     className="book" 
-                    style={{ backgroundImage: "url(/covers/" + book.id + ")"}} 
+                    // style={{ backgroundImage: "url(/covers/" + book.id + ")"}} 
                     key={book.id}>
                     <div 
                         className="cover-img">
                         <div 
                             className="cover" 
-                            style={{ backgroundImage: "url(/covers/" + book.id + ")"}}
+                            // style={{ backgroundImage: "url(/covers/" + book.id + ")"}}
                             >
                         </div>
                         <div className="cover2"/>

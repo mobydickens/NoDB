@@ -58,7 +58,7 @@ class App extends Component {
         // need to add check to see if any input boxes are empty
         toastr.options.positionClass = "toast-bottom-right";
         console.log("axios response", res)
-        toastr.success('Success!', 'Your book has been added to your to-read list');
+        toastr.success(`${book.title} has been added to your to-read list`, "Success!");
         this.setState({
           userBooklist: res.data
         })

@@ -37,7 +37,7 @@ class Recommendations extends Component {
                 <div className="rec-title">
                     <h1 className="new-reads">New Reads</h1>
                     <div className="subtitle main-subtitle">
-                        Get started with a premade list, or start your own
+                        Get started with a premade list, or start your own!
                     </div>
                 </div>
                 <main className="rec-box-parent">
