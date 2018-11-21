@@ -13,28 +13,20 @@ class App extends Component {
     super(props)
     this.state = {
       route: "Favorites",
-      default: [],
-      userBooklist: [],
+      booklist: [],
       activeButton: "rec"
     }
   }
 
  //GET upon render, sets state with default list of books from default and user lists sent from server
  componentDidMount() {
-  let that = this;
-  axios.all([
-    axios.get('/books'),
-    axios.get('/userbooks')
-  ])
-    .then(axios.spread(function(books, userbooks) {
-      let original = books.data.filter(book => {
-        return book.original === true;
+    axios
+      .get('/books')
+      .then(res => {
+        this.setState({
+          booklist: res.data
       })
-      that.setState({
-          default: original,
-          userBooklist: userbooks.data
-      })
-    }))
+    })
   }
   
   componentDidUpdate(prevProps) {
@@ -64,20 +56,20 @@ class App extends Component {
         toastr.options.positionClass = "toast-bottom-right";
         toastr.success(`${book.title} has been added to your to-read list`, "Success!");
         this.setState({
-          userBooklist: res.data
+          booklist: res.data
         })
       })
   }
 
   editBook = (edited) => {
     this.setState({
-      userBooklist: edited
+      booklist: edited
     })
   }
 
   deleteBook = (edited) => {
     this.setState({
-      userBooklist: edited
+      booklist: edited
     })
   }
 
@@ -135,19 +127,19 @@ class App extends Component {
         </nav>
         {this.state.route === "Recommendations" 
           ? <Recommendations 
-              default={ this.state.default }
+              booklist={ this.state.booklist }
               handleChange={ this.handleChangeAdd }
               addBookFn={ this.addBook }
             /> : null }
         {this.state.route === "Add new book" 
           ? <AddBook 
               route={ this.state.route }
-              userBooklist={ this.state.userBooklist }
+              booklist={ this.state.booklist }
               addBookFn={ this.addBook }
             /> : null }
         {this.state.route === "Favorites" 
           ? <Favorites 
-              userBooklist={ this.state.userBooklist }
+              booklist={ this.state.booklist }
               editBookFn={ this.editBook }
               deleteBookFn={ this.deleteBook } /> : null }
       </div>

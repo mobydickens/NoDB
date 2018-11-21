@@ -8,6 +8,7 @@ class Recommendations extends Component {
         //first get all of the tags in default booklist
         let tagList = [];
         let booksByTag = [];
+        
         for(let i = 0; i<books.length; i++) {
             if(!books[i].tags) {
                 continue;
@@ -29,7 +30,7 @@ class Recommendations extends Component {
     }
 
     render() { 
-        let tags = this.groupBooksByTag(this.props.default);
+        let tags = this.groupBooksByTag(this.props.booklist);
         return (
             <div className="container">
                 <div className="rec-title">
@@ -51,7 +52,7 @@ class Recommendations extends Component {
                                                 <div>{ book.title }</div>
                                                 <div className="rec-author">by {book.author}</div>
                                                 <button 
-                                                    className="badge badge-dark"
+                                                    className={book.read === false ? "badge badge-dark" : "badge badge-read"}
                                                     onClick={ () => this.props.addBookFn(book) }>Add
                                                 </button>
                                             </div>

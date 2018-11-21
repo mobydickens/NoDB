@@ -12,10 +12,7 @@ module.exports = {
     defaultList: (req, res) => {
         res.status(200).send(defaultBooklist);
     },
-    userBooklist: (req, res) => {
-        let favorites = defaultBooklist.filter(book => book.favorites === true);
-        res.status(200).send(favorites);
-    },
+
     getCover: (req, res) => {
         let { id } = req.params;
         let bookIndex = defaultBooklist.findIndex(book => {
@@ -65,10 +62,8 @@ module.exports = {
         }
         id++
         defaultBooklist.push(book);
-        let favorites = defaultBooklist.filter(book => {
-            return book.favorites === true;
-        })
-        res.status(200).send(favorites);   
+
+        res.status(200).send(defaultBooklist);   
     },
 
     //PUT - expects param id and body
@@ -87,13 +82,8 @@ module.exports = {
             original: false,
             read: false,
             id: Number(id)
-        }
-        
-        let favorites = defaultBooklist.filter(book => {
-            return book.favorites === true;
-           
-        })
-        res.status(200).send(favorites);
+        }      
+        res.status(200).send(defaultBooklist);
     },
 
     read: (req, res) => {
@@ -112,11 +102,7 @@ module.exports = {
             read: true,
             id: Number(id)
         }
-        let favorites = defaultBooklist.filter(book => {
-            return book.favorites === true;
-        })
-
-        res.status(200).send(favorites);
+        res.status(200).send(defaultBooklist);
     },
 
     //DELETE
@@ -135,9 +121,6 @@ module.exports = {
             read: defaultBooklist.read,
             id: Number(id)
         }
-        let favorites = defaultBooklist.filter(book => {
-            return book.favorites === true;
-        })
-        res.status(200).send(favorites);
+        res.status(200).send(defaultBooklist);
     }
 }
