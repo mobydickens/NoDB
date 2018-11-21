@@ -162,58 +162,14 @@ nav {
 /* Only one copy of this */
 .book-parent {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 /* 1 copy for each book */
-.parentforfav {
-  position: relative;
-  width: 250px;
-  height: auto;
-  margin: 25px;
-  padding: 15px;
-}
-
-.book {
-  width: 300px;
-  height: 450px;
-  border: 1px solid grey;
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  opacity: .3;
-}
-
-.full-text-box {
-  display: flex;
-  /* flex-direction: row; */
-  justify-content: center;
-  width: 100%;
-  background-color: rgba(255, 255, 255, .95);
-}
 
 
-.text-box {
-  position: absolute;
-  top: 50px;
-  /* left: 0px; */
-  font-size: 14px;
-  text-align: center;
-}
 
-/* styling buttons in favorites page  */
-.favorite-btn {
-  position: relative;
-  top: 30px;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 40px;
-}
 
+/* edit and delete buttons */
 .fav-child-btn {
   margin: 0 3px;
   padding: 0px;
