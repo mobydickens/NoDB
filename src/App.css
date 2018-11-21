@@ -133,6 +133,7 @@ nav {
 }
 
 .form-control, .custom-select {
+  margin-top: 5px;
   border-style: none;
   border-bottom: .5px solid lightgray;
 }

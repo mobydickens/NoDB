@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DropdownBtn from './DropdownBtn.jsx';
 import axios from 'axios';
-// import toastr from 'toastr';
+import toastr from 'toastr';
 
 //Completes ONE stateful component
 class AddBook extends Component {
@@ -28,6 +28,16 @@ componentDidMount() {
 }
 
   getBook = () => {
+    if(this.state.title === "") {
+        console.log("fields required");
+        toastr.options.positionClass = "toast-bottom-right";
+        toastr.error(`Title is required`);
+        return;
+    } else if (this.state.author === "") {
+        toastr.options.positionClass = "toast-bottom-right";
+        toastr.error(`Author is required`);
+        return;
+    }
     this.props.addBookFn(this.state)
     this.setState({
         title: "",
@@ -52,13 +62,13 @@ componentDidMount() {
             <div className="addbook-box">
                 <input 
                     type="text" 
-                    className="form-control"
+                    className={this.state.title === "" ? "form-control is-invalid" : "form-control is-valid"}
                     placeholder="Title"
                     value={ this.state.title } 
                     onChange={ (e) => this.setState({ title: e.target.value })} />
                 <input 
                     type="text" 
-                    className="form-control"
+                    className={this.state.author === "" ? "form-control is-invalid" : "form-control is-valid"}
                     placeholder="Author"
                     value={ this.state.author } 
                     onChange={ (e) => this.setState({ author: e.target.value })} />

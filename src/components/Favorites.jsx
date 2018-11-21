@@ -19,17 +19,19 @@ class Favorites extends Component {
                         </div>
                     </div>
                     <div className="text-box">
-                        <div 
-                            className="title">
-                            {book.title}
+                        <div className="book-details">
+                            <div 
+                                className="title">
+                                {book.title}
+                            </div>
+                            <div
+                                className="author">
+                                {book.author}
+                            </div>
+                                {!book.genre ? "" : <div className="genre">{book.genre}</div>}
+                                {!book.recommended ? "" : <div className="rec">Recommended by:<br/> {book.recommended}
+                            </div>}
                         </div>
-                        <div
-                            className="author">
-                            {book.author}
-                        </div>
-                            {!book.genre ? "" : <div className="genre">{book.genre}</div>}
-                            {!book.recommended ? "" : <div className="rec">Recommended by:<br/> {book.recommended}
-                        </div>}
                         <div className="favorite-btn">
                             <DeleteBtn 
                                 deleteBookFn={ this.props.deleteBookFn}
