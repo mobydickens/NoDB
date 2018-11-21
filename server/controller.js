@@ -112,13 +112,13 @@ module.exports = {
             return book.id === Number(id);
         })
         defaultBooklist[bookIndex] = {
-            title: defaultBooklist.title,
-            author: defaultBooklist.author,
-            genre: defaultBooklist.genre,
-            recommended: defaultBooklist.recommended,
+            title: defaultBooklist[bookIndex].title,
+            author: defaultBooklist[bookIndex].author,
+            genre: defaultBooklist[bookIndex].genre,
+            recommended: defaultBooklist[bookIndex].recommended,
             favorites: false,
-            original: defaultBooklist.original,
-            read: defaultBooklist.read,
+            original: defaultBooklist[bookIndex].original,
+            read: defaultBooklist[bookIndex].read,
             id: Number(id)
         }
         res.status(200).send(defaultBooklist);

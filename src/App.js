@@ -28,37 +28,23 @@ class App extends Component {
       })
     })
   }
-  
-  componentDidUpdate(prevProps) {
-    if (this.props.title !== prevProps.title 
-            || this.props.author !== prevProps.author
-            || this.props.genre !== prevProps.genre
-            || this.props.recommended !== prevProps.recommended
-            ) {
-        this.setState({
-            title: this.props.title,
-            author: this.props.author,
-            genre: this.props.genre,
-            recommended: this.props.recommended,
-            id: this.props.id
-        })
-      }
-    } 
 
   //adds book to favorites list either from recommendations or add book page
   addBook = (book) => {
-    axios
-      .post('/books', book)
-      .then(res => {
+    if(book.favorites !== true) {
+      axios
+        .post('/books', book)
+        .then(res => {
 
-        // need to add a check to see if book is already in 'favorites list'
-        // need to add check to see if any input boxes are empty
-        toastr.options.positionClass = "toast-bottom-right";
-        toastr.success(`${book.title} has been added to your to-read list`, "Success!");
-        this.setState({
-          booklist: res.data
-        })
+          // need to add a check to see if book is already in 'favorites list'
+          // need to add check to see if any input boxes are empty
+          toastr.options.positionClass = "toast-bottom-right";
+          toastr.success(`${book.title} has been added to your to-read list`, "Success!");
+          this.setState({
+            booklist: res.data
+          })
       })
+    }
   }
 
   editBook = (edited) => {

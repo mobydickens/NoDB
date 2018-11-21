@@ -118,6 +118,7 @@ nav {
 }
 
 .badge-read {
+  color: red;
   cursor: not-allowed;
   background-color: lightgray;
 

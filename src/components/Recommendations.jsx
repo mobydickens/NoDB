@@ -47,6 +47,7 @@ class Recommendations extends Component {
                                 <div className="browse">Browse {obj.tag}</div>
                                     <div className="rec-booklist">
                                     {obj.books.map(book => {
+                                        if(book.favorites === false) {
                                         return (<div key={book.id} className="book-img-parent">
                                             <div className="mini-book">
                                                 <div>{ book.title }</div>
@@ -59,6 +60,7 @@ class Recommendations extends Component {
                                             <img className="book-img" src={`/covers/${book.id}`} alt={book.id}/>
                                         </div>
                                         )
+                                        }
                                     })}
                                 </div>
                             </div>
