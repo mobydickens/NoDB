@@ -60,6 +60,7 @@ module.exports = {
             recommended: recommended,
             favorites: true,
             original: false,
+            read: false,
             id: id 
         }
         id++
@@ -84,6 +85,7 @@ module.exports = {
             recommended: recommended,
             favorites: true,
             original: false,
+            read: false,
             id: Number(id)
         }
         
@@ -91,6 +93,29 @@ module.exports = {
             return book.favorites === true;
            
         })
+        res.status(200).send(favorites);
+    },
+
+    read: (req, res) => {
+        let { id } = req.params;
+        let { title, author, genre, recommended, original } = req.body
+        let bookIndex = defaultBooklist.findIndex(book => {
+            return book.id === Number(id);
+        })
+        defaultBooklist[bookIndex] = {
+            title: title,
+            author: author,
+            genre: genre,
+            recommended: recommended,
+            favorites: true,
+            original: original,
+            read: true,
+            id: Number(id)
+        }
+        let favorites = defaultBooklist.filter(book => {
+            return book.favorites === true;
+        })
+
         res.status(200).send(favorites);
     },
 
@@ -107,6 +132,7 @@ module.exports = {
             recommended: defaultBooklist.recommended,
             favorites: false,
             original: defaultBooklist.original,
+            read: defaultBooklist.read,
             id: Number(id)
         }
         let favorites = defaultBooklist.filter(book => {

@@ -10,7 +10,8 @@ module.exports = [
         recommended: null,
         id: 0,
         favorites: true,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Moby Dick",
@@ -20,7 +21,8 @@ module.exports = [
         recommended: null,
         id: 1,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "1984",
@@ -30,7 +32,8 @@ module.exports = [
         recommended: null,
         id: 2,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Crime and Punishment",
@@ -40,7 +43,8 @@ module.exports = [
         recommended: null,
         id: 3,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Frankenstein",
@@ -50,7 +54,8 @@ module.exports = [
         recommended: null,
         id: 4,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "A Tale of Two Cities",
@@ -60,7 +65,8 @@ module.exports = [
         recommended: null,
         id: 5,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Adventures of Huckleberry Finn",
@@ -70,7 +76,8 @@ module.exports = [
         recommended: null,
         id: 6,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Jane Eyre",
@@ -80,7 +87,8 @@ module.exports = [
         recommended: null,
         id: 7,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Picture of Dorian Gray",
@@ -90,7 +98,8 @@ module.exports = [
         recommended: null,
         id: 8,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Great Gatsby",
@@ -100,7 +109,8 @@ module.exports = [
         recommended: null,
         id: 9,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     //10 science fiction
     {
@@ -111,7 +121,8 @@ module.exports = [
         recommended: null,
         id: 10,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Dune",
@@ -121,7 +132,8 @@ module.exports = [
         recommended: null,
         id: 11,
         favorites: false ,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Red Mars",
@@ -131,7 +143,8 @@ module.exports = [
         recommended: null,
         id: 12,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Martian",
@@ -141,7 +154,8 @@ module.exports = [
         recommended: null,
         id: 13,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "A Hitchhiker's Guide to the Galaxy",
@@ -151,7 +165,8 @@ module.exports = [
         recommended: null,
         id: 14,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Leviathan Wakes",
@@ -161,7 +176,8 @@ module.exports = [
         recommended: null,
         id: 15,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Stranger in a Strange Land",
@@ -171,7 +187,8 @@ module.exports = [
         recommended: null,
         id: 16,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Time Machine",
@@ -181,7 +198,8 @@ module.exports = [
         recommended: null,
         id: 17,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Brave New World",
@@ -191,7 +209,8 @@ module.exports = [
         recommended: null,
         id: 18,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "A Canticle for Leibowitz",
@@ -201,7 +220,8 @@ module.exports = [
         recommended: null,
         id: 19,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     //10 fantasy
     {
@@ -212,7 +232,8 @@ module.exports = [
         recommended: null,
         id:  20,
         favorites: false  ,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Daughter of the Forest",
@@ -222,7 +243,8 @@ module.exports = [
         recommended: null,
         id: 21,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Game of Thrones",
@@ -232,7 +254,8 @@ module.exports = [
         recommended: null,
         id: 22,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Book of Flying",
@@ -242,7 +265,8 @@ module.exports = [
         recommended: null,
         id: 23,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Name of the Wind",
@@ -252,7 +276,8 @@ module.exports = [
         recommended: null,
         id: 24,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Way of Kings",
@@ -262,7 +287,8 @@ module.exports = [
         recommended: null,
         id: 25,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Fellowship of the Ring",
@@ -272,7 +298,8 @@ module.exports = [
         recommended: null,
         id: 26,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Dealing with Dragons",
@@ -282,7 +309,8 @@ module.exports = [
         recommended: null,
         id: 27,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Deerskin",
@@ -292,7 +320,8 @@ module.exports = [
         recommended: null,
         id: 28,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Blade Itself",
@@ -302,7 +331,8 @@ module.exports = [
         recommended: null,
         id: 29,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     //
     {
@@ -313,7 +343,8 @@ module.exports = [
         recommended: null,
         id: 30,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Death in Ancient Egypt",
@@ -323,7 +354,8 @@ module.exports = [
         recommended: null,
         id: 31,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "History of the Peloponnesian War",
@@ -333,7 +365,8 @@ module.exports = [
         recommended: null,
         id: 32,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "A Natural History of Shells",
@@ -343,7 +376,8 @@ module.exports = [
         recommended: null,
         id: 33,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "A People's History of the United States",
@@ -353,7 +387,8 @@ module.exports = [
         recommended: null,
         id: 34,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Rats, Lice and History",
@@ -363,7 +398,8 @@ module.exports = [
         recommended: null,
         id: 35,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Easter Island, Earth Island",
@@ -373,7 +409,8 @@ module.exports = [
         recommended: null,
         id: 36,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Success and Failure of Picasso",
@@ -383,7 +420,8 @@ module.exports = [
         recommended: null,
         id: 37,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Gods, Demons, and Symbols of Ancient Mesopotamia",
@@ -393,7 +431,8 @@ module.exports = [
         recommended: null,
         id: 38,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Mummies, Disease and Ancient Cultures",
@@ -403,7 +442,8 @@ module.exports = [
         recommended: null,
         id: 39,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     //Biography
     {
@@ -414,7 +454,8 @@ module.exports = [
         recommended: null,
         id: 40,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Autobiography of Benjamin Franklin",
@@ -424,7 +465,8 @@ module.exports = [
         recommended: null,
         id: 41,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Judy Garland on Judy Garland: Interviews and Encounters",
@@ -434,7 +476,8 @@ module.exports = [
         recommended: null,
         id: 42,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "My Life in Orange: Growing up with the Guru",
@@ -444,7 +487,8 @@ module.exports = [
         recommended: null,
         id: 43,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "My Brief History",
@@ -454,7 +498,8 @@ module.exports = [
         recommended: null,
         id: 44,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Speak, Memory",
@@ -464,7 +509,8 @@ module.exports = [
         recommended: null,
         id: 45,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Insomniac Dreams: Experiments with Time",
@@ -474,7 +520,8 @@ module.exports = [
         recommended: null,
         id: 46,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "I am Spock",
@@ -484,7 +531,8 @@ module.exports = [
         recommended: null,
         id: 47,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Confessions of an Actor",
@@ -494,7 +542,8 @@ module.exports = [
         recommended: null,
         id: 48,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Growing up Amish",
@@ -504,7 +553,8 @@ module.exports = [
         recommended: null,
         id: 49,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     //Fiction
     {
@@ -515,7 +565,8 @@ module.exports = [
         recommended: null,
         id: 50,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "David Copperfield",
@@ -525,7 +576,8 @@ module.exports = [
         recommended: null,
         id: 51,
         favorites: false ,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "American Psycho",
@@ -535,7 +587,8 @@ module.exports = [
         recommended: null,
         id: 52,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Pillars of the Earth",
@@ -545,7 +598,8 @@ module.exports = [
         recommended: null,
         id: 53,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "American Gods",
@@ -555,7 +609,8 @@ module.exports = [
         recommended: null,
         id: 54,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Wind in the Willows",
@@ -565,7 +620,8 @@ module.exports = [
         recommended: null,
         id: 55,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Red Harvest",
@@ -575,7 +631,8 @@ module.exports = [
         recommended: null,
         id: 56,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "The Kite Runner",
@@ -585,7 +642,8 @@ module.exports = [
         recommended: null,
         id: 57,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Three Men in a Boat",
@@ -595,7 +653,8 @@ module.exports = [
         recommended: null,
         id: 58,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
     {
         title: "Gone with the Wind",
@@ -605,7 +664,8 @@ module.exports = [
         recommended: null,
         id: 59,
         favorites: false,
-        original: true
+        original: true,
+        read: false
     },
 ]
 

@@ -12,6 +12,7 @@ app.get('/books', controller.defaultList);
 app.get('/userbooks', controller.userBooklist);
 app.get('/covers/:id', controller.getCover);
 app.post('/books', controller.addUserBook);
+app.put('/read/:id', controller.read);
 app.put('/userbooks/:id', controller.editUserBook);
 app.delete('/userbooks', controller.deleteUserBook);
 

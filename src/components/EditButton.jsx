@@ -1,6 +1,7 @@
 //child of FAVORITES
 import React, { Component } from 'react';
 import axios from 'axios';
+import toastr from 'toastr';
 
 class EditButton extends Component {
     constructor(props) {
@@ -15,6 +16,15 @@ class EditButton extends Component {
     }
 
     editBook = () => {
+        if(this.state.title === "") {
+            toastr.options.positionClass = "toast-bottom-right";
+            toastr.error(`Title cannot be blank`);
+            return;
+        } else if (this.state.author === "") {
+            toastr.options.positionClass = "toast-bottom-right";
+            toastr.error(`Author cannot be blank`);
+            return;
+        }
         axios.put(`/userbooks/${this.state.id}`, this.state).then(res => {
             this.props.editBookFn(res.data)
         })
