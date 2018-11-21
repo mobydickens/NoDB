@@ -5,6 +5,13 @@ import axios from 'axios';
 
 class DeleteBtn extends Component {
 
+
+    confirmDelete = () => {
+        if(window.confirm("Are you sure?")) {
+            this.deletebook();
+        };
+    }
+
     deletebook = () => {
         axios.delete(`/userbooks?id=${ this.props.id }`)
             .then(res => {
@@ -17,7 +24,7 @@ class DeleteBtn extends Component {
             <button 
                 className="btn btn-primary fav-child-btn" 
                 type="button"
-                onClick={ () => this.deletebook() }>
+                onClick={ () => this.confirmDelete() }>
                 Delete
             </button>
         </div>
