@@ -160,13 +160,57 @@ nav {
 
 /* Favorites component */
 /* Only one copy of this */
-.book-parent {
+.favorites-parent {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 /* 1 copy for each book */
+.individual-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 320px;
+  width: 215px;
+  margin: 18px;
+  padding: 0px;
+  text-align: center;
+  border: 1px solid #c6c9cc;
+  background-color: #E8EEF6;
+}
 
+.book-parent {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
+.book {
+  width: 115px;
+  height: 180px;
+  background: no-repeat;
+  background-size: cover;
+  box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 5px;
+}
+
+/* .book-details {
+  overflow: scroll;
+} */
+.text-box {
+  padding: 10px;
+  background-color: white;
+}
+
+.favorite-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 5px;
+}
 
 
 /* edit and delete buttons */
@@ -187,13 +231,14 @@ nav {
 
 /* styling each book in favorites page  */
 .author {
+  margin-top: -3px;
   font-size: 15px;
 }
 .title {
-  font-size: 20px;
-  margin-bottom: -20px;
+  font-size: 18px;
 }
 .genre {
+  font-size: 14px;
   color: grey;
   font-style: oblique;
 }
