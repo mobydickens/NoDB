@@ -7,6 +7,13 @@ import axios from 'axios';
 
 class Favorites extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            isHidden: false
+        }
+    }
+
     handleChange = (book) => {
         if(book.read === false) {
             axios.put(`/read/${book.id}`, book).then(res => {
@@ -14,10 +21,22 @@ class Favorites extends Component {
             })
         }
     }
+
+    isHidden = () => {
+        if(this.state.isHidden === false) {
+            this.setState({
+                isHidden: true
+            })
+        } else {
+            this.setState({
+                isHidden: false
+            })
+        }
+    }
     
 
     render() {
-        const book = this.props.booklist.map(book => {
+        const book = this.props.booklist.filter(book => this.state.isHidden === false || book.read === false).map(book => {
             if(book.favorites === true) {
                 return(
                     <div key={book.id} className="individual-parent">
@@ -72,9 +91,15 @@ class Favorites extends Component {
         })
 
         return ( 
-            <div className="container">
+            <div className="container container1">
                 <div className="subtitle">To-read books in favorites</div>
-                <div className="favorites-parent">
+                <p 
+                    onClick={ () => this.isHidden() }
+                    className="hidden text-primary">
+                    {this.state.isHidden === false ? "Hide read books" : "Show read books"}
+                </p>
+                <div 
+                    className="favorites-parent">
                     {book.reverse()}
                 </div>
             </div>

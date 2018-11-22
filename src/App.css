@@ -168,6 +168,21 @@ nav {
 
 /* Favorites component */
 /* Only one copy of this */
+.container1 {
+  position: relative;
+}
+.hidden {
+  position: absolute;
+  right: 88px;
+  top: 47px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hidden:hover {
+  color: black;
+  cursor: pointer;
+}
+
 .favorites-parent {
   display: flex;
   flex-direction: row;
