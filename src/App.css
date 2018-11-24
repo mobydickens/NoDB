@@ -189,6 +189,11 @@ h3 {
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.random {
+  right: 240px;
+}
+
 .hidden:hover {
   color: black;
   cursor: pointer;

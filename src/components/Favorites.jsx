@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import EditButton from './EditButton.jsx';
 import DeleteBtn from './DeleteBtn.jsx';
+import Random from './random.jsx';
 import axios from 'axios';
 
 class Favorites extends Component {
@@ -10,7 +11,7 @@ class Favorites extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isHidden: false,
+            isHidden: false
         }
     }
 
@@ -34,7 +35,6 @@ class Favorites extends Component {
         }
     }
     
-
     render() {
         let bookCount = 0;
         const book = this.props.booklist.filter(book => this.state.isHidden === false || book.read === false).map(book => {
@@ -95,11 +95,12 @@ class Favorites extends Component {
         return ( 
             <div className="container container1">
                 <div className="subtitle">To-read books in favorites</div>
-                <p 
+                { bookCount === 0 ? "" : <Random booklist={ this.props.booklist }/> }
+                <span 
                     onClick={ () => this.isHidden() }
                     className="hidden text-primary">
                     {bookCount === 0 ? "" : this.state.isHidden === false ? "Hide read books" : "Show read books"}
-                </p>
+                </span>
                 <div 
                     className="favorites-parent">
                     {bookCount === 0 ? <h3>Your bookshelf is empty!</h3> : book.reverse()}
