@@ -31,7 +31,6 @@ class App extends Component {
 
   //adds book to favorites list either from recommendations or add book page
   addBook = (book) => {
-    console.log("function running")
     if(book.favorites !== true) {
       axios
         .post('/books', book)
@@ -129,7 +128,8 @@ class App extends Component {
           ? <Favorites 
               booklist={ this.state.booklist }
               editBookFn={ this.editBook }
-              deleteBookFn={ this.deleteBook } /> : null }
+              deleteBookFn={ this.deleteBook }
+              handleChange={ this.handleChangeAdd } /> : null }
       </div>
     );
   }

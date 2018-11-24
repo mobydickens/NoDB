@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import toastr from 'toastr';
 import axios from 'axios';
+import AddBookBtn from './addBookBtn.jsx';
 
 //Completes one stateless functional component
 class Recommendations extends Component {
@@ -84,12 +85,7 @@ class Recommendations extends Component {
                     })}
                 </main>
                 <div className="rec-button-parent">
-                    <button 
-                        type="button" 
-                        className="btn btn-secondary main-button"
-                        onClick={ () => this.props.handleChange() }>
-                        Click to add your own book to favorites!
-                    </button>
+                    <AddBookBtn handleChange={ this.props.handleChange }/>
                 </div>
             </div>
         );

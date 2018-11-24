@@ -1,3 +1,4 @@
+//Child of favorites
 import React, { Component } from 'react';
 
 class Random extends Component {
@@ -26,7 +27,6 @@ class Random extends Component {
                     onClick={ () => this.random() }>
                 Not sure which of your books to read? Pick a random book!
                 </span>
-
                 <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">

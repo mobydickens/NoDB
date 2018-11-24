@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import EditButton from './EditButton.jsx';
 import DeleteBtn from './DeleteBtn.jsx';
+import AddBookBtn from './addBookBtn.jsx';
 import Random from './random.jsx';
 import axios from 'axios';
 
@@ -96,7 +97,7 @@ class Favorites extends Component {
         return ( 
             <div className="container container1">
                 <div className="subtitle">To-read books in favorites</div>
-                { bookCount === 0 ? "" : <Random booklist={ this.props.booklist }/> }
+                { bookCount === 0 ? "" : <Random booklist={ this.props.booklist } /> }
                 <span 
                     onClick={ () => this.isHidden() }
                     className="hidden text-primary">
@@ -105,6 +106,9 @@ class Favorites extends Component {
                 <div 
                     className="favorites-parent">
                     {bookCount === 0 ? <h3>Your bookshelf is empty!</h3> : book.reverse()}
+                </div>
+                <div className="rec-button-parent">
+                    <AddBookBtn handleChange={ this.props.handleChange }/>
                 </div>
             </div>
         );
