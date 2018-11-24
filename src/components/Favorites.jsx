@@ -83,6 +83,7 @@ class Favorites extends Component {
                                 <EditButton 
                                     title={ book.title }
                                     author={ book.author }
+                                    genre={ book.genre }
                                     recommended={ book.recommended }
                                     id={ book.id }
                                     editBookFn={ this.props.editBookFn }/>

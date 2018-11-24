@@ -136,8 +136,8 @@ module.exports = [
         read: false
     },
     {
-        title: "Red Mars",
-        author: "Kim Stanley Robinson",
+        title: "Ready Player One",
+        author: "Ernest Cline",
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
@@ -158,8 +158,8 @@ module.exports = [
         read: false
     },
     {
-        title: "A Hitchhiker's Guide to the Galaxy",
-        author: "Douglas Adams",
+        title: "Ender's Game",
+        author: "Orson Scott Card",
         genre: "Science Fiction",
         tags: ["Science Fiction"],
         recommended: null,
@@ -225,8 +225,8 @@ module.exports = [
     },
     //10 fantasy
     {
-        title: "Cart and Cwidder",
-        author: "Diana Wynne Jones",
+        title: "Six of Crows",
+        author: "Leigh Bardugo",
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
@@ -313,8 +313,8 @@ module.exports = [
         read: false
     },
     {
-        title: "Deerskin",
-        author: "Robin McKinley",
+        title: "The Lion, the Witch and the Wardrobe",
+        author: "C.S. Lewis",
         genre: "Fantasy",
         tags: ["Fantasy"],
         recommended: null,
@@ -347,8 +347,8 @@ module.exports = [
         read: false
     },
     {
-        title: "Death in Ancient Egypt",
-        author: "A.J. Spencer",
+        title: "Guns, Germs, and Steel",
+        author: "Jared Diamond",
         genre: "History",
         tags: ["History"],
         recommended: null,
@@ -369,8 +369,8 @@ module.exports = [
         read: false
     },
     {
-        title: "A Natural History of Shells",
-        author: "Geerat J. Vermeij",
+        title: "The Art of War",
+        author: "Sun Tzu",
         genre: "History",
         tags: ["History"],
         recommended: null,
@@ -391,8 +391,8 @@ module.exports = [
         read: false
     },
     {
-        title: "Rats, Lice and History",
-        author: "Hans Zizsser",
+        title: "Cleopatra: A Life",
+        author: "Stacy Schiff",
         genre: "History",
         tags: ["History"],
         recommended: null,
@@ -402,8 +402,8 @@ module.exports = [
         read: false
     },
     {
-        title: "Easter Island, Earth Island",
-        author: "Paul G. Bahn",
+        title: "The Diary of a Young Girl",
+        author: "Anne Frank",
         genre: "History",
         tags: ["History"],
         recommended: null,
@@ -424,8 +424,8 @@ module.exports = [
         read: false
     },
     {
-        title: "Gods, Demons, and Symbols of Ancient Mesopotamia",
-        author: "Jeremy Black",
+        title: "Sapiens: A Brief History of Humankind",
+        author: "Yuval Noah Harari",
         genre: "History",
         tags: ["History"],
         recommended: null,
@@ -447,8 +447,8 @@ module.exports = [
     },
     //Biography
     {
-        title: "Wishful Drinking",
-        author: "Carrie Fisher",
+        title: "The Glass Castle",
+        author: "Jeannette Walls",
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
@@ -458,8 +458,8 @@ module.exports = [
         read: false
     },
     {
-        title: "The Autobiography of Benjamin Franklin",
-        author: "Benjamin Franklin",
+        title: "Yes Please",
+        author: "Amy Poehler",
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
@@ -491,8 +491,8 @@ module.exports = [
         read: false
     },
     {
-        title: "My Brief History",
-        author: "Stephen Hawking",
+        title: "Orange is the New Black",
+        author: "Piper Kerman",
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
@@ -524,8 +524,8 @@ module.exports = [
         read: false
     },
     {
-        title: "I am Spock",
-        author: "Leonard Nimoy",
+        title: "The Hiding Place: The Triumphant True Story of Corrie Ten Boom",
+        author: "Corrie ten Boom",
         genre: "Autobiography",
         tags: ["Autobiography"],
         recommended: null,
@@ -591,8 +591,8 @@ module.exports = [
         read: false
     },
     {
-        title: "The Pillars of the Earth",
-        author: "Ken Follett",
+        title: "The Catcher in the Rye",
+        author: "J.D. Salinger",
         genre: "Fiction",
         tags: ["Fiction"],
         recommended: null,

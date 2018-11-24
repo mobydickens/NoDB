@@ -31,7 +31,6 @@ class EditButton extends Component {
     }
 
     render() {
-        // console.log(this.state);
         return (
             <div>
                 <div className="favorite-child-btn">
