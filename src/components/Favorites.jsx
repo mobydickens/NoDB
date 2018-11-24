@@ -10,7 +10,7 @@ class Favorites extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isHidden: false
+            isHidden: false,
         }
     }
 
@@ -36,8 +36,10 @@ class Favorites extends Component {
     
 
     render() {
+        let bookCount = 0;
         const book = this.props.booklist.filter(book => this.state.isHidden === false || book.read === false).map(book => {
             if(book.favorites === true) {
+                bookCount++;
                 return(
                     <div key={book.id} className="individual-parent">
                         
@@ -100,7 +102,7 @@ class Favorites extends Component {
                 </p>
                 <div 
                     className="favorites-parent">
-                    {book.reverse()}
+                    {bookCount === 0 ? <h3>Your bookshelf is empty!</h3> : book.reverse()}
                 </div>
             </div>
         );

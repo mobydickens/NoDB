@@ -9,7 +9,7 @@ module.exports = [
         tags: ["Classics", "Adventure", "Romance"],
         recommended: null,
         id: 0,
-        favorites: true,
+        favorites: false,
         original: true,
         read: false
     },
