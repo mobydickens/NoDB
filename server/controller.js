@@ -57,6 +57,7 @@ module.exports = {
             recommended: recommended,
             favorites: true,
             original: false,
+            tags: req.body.tags,
             read: false,
             id: id 
         }
@@ -78,8 +79,9 @@ module.exports = {
             author: author,
             genre: genre,
             recommended: recommended,
+            tags: req.body.tags,
             favorites: true,
-            original: false,
+            original: req.body.original || false,
             read: false,
             id: Number(id)
         }      
@@ -111,15 +113,20 @@ module.exports = {
         let bookIndex = defaultBooklist.findIndex(book => {
             return book.id === Number(id);
         })
-        defaultBooklist[bookIndex] = {
-            title: defaultBooklist[bookIndex].title,
-            author: defaultBooklist[bookIndex].author,
-            genre: defaultBooklist[bookIndex].genre,
-            recommended: defaultBooklist[bookIndex].recommended,
-            favorites: false,
-            original: defaultBooklist[bookIndex].original,
-            read: defaultBooklist[bookIndex].read,
-            id: Number(id)
+        if(defaultBooklist[bookIndex].original === true) {
+            defaultBooklist[bookIndex] = {
+                title: defaultBooklist[bookIndex].title,
+                author: defaultBooklist[bookIndex].author,
+                genre: defaultBooklist[bookIndex].genre,
+                tags: defaultBooklist[bookIndex].tags,
+                recommended: defaultBooklist[bookIndex].recommended,
+                favorites: false,
+                original: defaultBooklist[bookIndex].original,
+                read: defaultBooklist[bookIndex].read,
+                id: Number(id)
+            }
+        } else {
+            defaultBooklist.splice(bookIndex, 1);
         }
         res.status(200).send(defaultBooklist);
     }

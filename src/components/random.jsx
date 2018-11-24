@@ -1,5 +1,6 @@
 //Child of favorites
 import React, { Component } from 'react';
+import toastr from 'toastr';
 
 class Random extends Component {
     constructor(props) {
@@ -11,7 +12,13 @@ class Random extends Component {
 
     random = () => {
         let filtered = this.props.booklist.filter(book => book.read === false && book.favorites === true);
-        let random = filtered[Math.floor(Math.random() * filtered.length - 1 )];
+        if(filtered.length === 0) {
+            this.setState({
+                random: "You have no unread books in your list"
+            });
+            return;
+        }
+        let random = filtered[Math.floor(Math.random() * (filtered.length - 1) )];
         this.setState({
             random: random.title + " by " + random.author
         })
