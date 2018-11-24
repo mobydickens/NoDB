@@ -28,9 +28,7 @@ componentDidMount() {
 }
 
   getBook = () => {
-    console.log("should be props", this.props.booklist);
     if(this.state.title === "") {
-        console.log("fields required");
         toastr.options.positionClass = "toast-bottom-right";
         toastr.error(`Title is required`);
         return;

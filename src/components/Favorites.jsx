@@ -98,7 +98,7 @@ class Favorites extends Component {
                 <p 
                     onClick={ () => this.isHidden() }
                     className="hidden text-primary">
-                    {this.state.isHidden === false ? "Hide read books" : "Show read books"}
+                    {bookCount === 0 ? "" : this.state.isHidden === false ? "Hide read books" : "Show read books"}
                 </p>
                 <div 
                     className="favorites-parent">
