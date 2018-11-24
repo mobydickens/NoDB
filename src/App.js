@@ -31,6 +31,7 @@ class App extends Component {
 
   //adds book to favorites list either from recommendations or add book page
   addBook = (book) => {
+    console.log("function running")
     if(book.favorites !== true) {
       axios
         .post('/books', book)
@@ -42,7 +43,7 @@ class App extends Component {
           toastr.success(`${book.title} has been added to your to-read list`, "Success!");
           this.setState({
             booklist: res.data
-          })
+        })
       })
     }
   }
@@ -116,6 +117,7 @@ class App extends Component {
               booklist={ this.state.booklist }
               handleChange={ this.handleChangeAdd }
               addBookFn={ this.addBook }
+              editBookFn={ this.editBook }
             /> : null }
         {this.state.route === "Add new book" 
           ? <AddBook 

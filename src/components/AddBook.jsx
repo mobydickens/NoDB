@@ -28,6 +28,7 @@ componentDidMount() {
 }
 
   getBook = () => {
+    console.log("should be props", this.props.booklist);
     if(this.state.title === "") {
         console.log("fields required");
         toastr.options.positionClass = "toast-bottom-right";
@@ -37,6 +38,19 @@ componentDidMount() {
         toastr.options.positionClass = "toast-bottom-right";
         toastr.error(`Author is required`);
         return;
+    } 
+    for(let i=0; i< this.props.booklist.length; i++) {
+        if(this.props.booklist[i].title === this.state.title && this.props.booklist[i].author === this.state.author) {
+        toastr.options.positionClass = "toast-bottom-right";
+        toastr.error(`You already added that book!`);
+        this.setState({
+            title: "",
+            author: "",
+            genre: "",
+            recommended: ""
+        })
+        return;
+        }
     }
     this.props.addBookFn(this.state)
     this.setState({

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import toastr from 'toastr';
+import axios from 'axios';
 
 //Completes one stateless functional component
 class Recommendations extends Component {
@@ -29,6 +31,20 @@ class Recommendations extends Component {
         return booksByTag.filter(obj => obj.books.length >= 5);
     }
 
+    editRecommendedBook = (book) => {
+        if(book.favorites === true) {
+            toastr.options.positionClass = "toast-bottom-right";
+            toastr.error("You already added that book!")
+            return;
+        } else {
+            axios.put(`/userbooks/${book.id}`, book).then(res => {
+                this.props.editBookFn(res.data) 
+            })
+        }
+        toastr.options.positionClass = "toast-bottom-right";
+        toastr.success(`${book.title} has been added to your to-read list`, "Success!");
+    }
+
     render() { 
         let tags = this.groupBooksByTag(this.props.booklist);
         return (
@@ -54,7 +70,7 @@ class Recommendations extends Component {
                                                 <div className="rec-author">by {book.author}</div>
                                                 <button 
                                                     className={book.read === false ? "badge badge-dark" : "badge badge-read"}
-                                                    onClick={ () => this.props.addBookFn(book) }>Add
+                                                    onClick={ () => this.editRecommendedBook(book) }>Add
                                                 </button>
                                             </div>
                                             <img className="book-img" src={`/covers/${book.id}`} alt={book.id}/>
