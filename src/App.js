@@ -46,13 +46,13 @@ class App extends Component {
       })
     }
   }
-
+  //any book edit results come here to update state
   editBook = (edited) => {
     this.setState({
       booklist: edited
     })
   }
-
+  //any book delete results come here to update state
   deleteBook = (edited) => {
     this.setState({
       booklist: edited
@@ -66,7 +66,7 @@ class App extends Component {
       activeButton: "rec"
       })
   }
-  
+  //this changes "route" on state to show correct page
   handleChangeAdd = () => {
     this.setState({ 
       route: "Add new book",

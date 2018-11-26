@@ -1,6 +1,5 @@
 //Child of favorites
 import React, { Component } from 'react';
-import toastr from 'toastr';
 
 class Random extends Component {
     constructor(props) {

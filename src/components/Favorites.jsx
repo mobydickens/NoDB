@@ -55,7 +55,7 @@ class Favorites extends Component {
                             <button 
                                 onClick={ () => this.handleChange(book) }
                                 className="bookemoji">
-                            <span role="img" aria-label="book">📖</span>
+                            <span title="Mark as read" role="img" aria-label="book">📖</span>
                             </button>
                             <div 
                                 className="book"
