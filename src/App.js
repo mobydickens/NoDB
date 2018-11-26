@@ -7,6 +7,9 @@ import Recommendations from './components/Recommendations.jsx';
 import AddBook from './components/AddBook.jsx';
 import Favorites from './components/Favorites.jsx';
 
+import routes from './routes.js';
+import {Link} from 'react-router-dom';
+
 class App extends Component {
 
   constructor(props) {
@@ -82,6 +85,7 @@ class App extends Component {
             <h1 className="navbar-brand">New Reads</h1>
           </div>
           <div>
+            {/* below controls what class is active on navbar */}
             <button
               name="rec" 
               className={ this.state.activeButton === "rec" 
@@ -111,6 +115,7 @@ class App extends Component {
             </button>
           </div>
         </nav>
+        {/* below controls which page shows with state */}
         {this.state.route === "Recommendations" 
           ? <Recommendations 
               booklist={ this.state.booklist }
