@@ -6,9 +6,9 @@ import Recommendations from './components/Recommendations.jsx';
 
 export default (
     <Switch>
-        <Route />
-        <Route />
-        <Route />
+        <Route component={ Recommendations } exact path="/" />
+        <Route component={ AddBook } path="/addbook" />
+        <Route component={ Favorites } path="/favorites" />
     </Switch>
 )
 

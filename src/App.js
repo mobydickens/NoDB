@@ -7,6 +7,7 @@ import Recommendations from './components/Recommendations.jsx';
 import AddBook from './components/AddBook.jsx';
 import Favorites from './components/Favorites.jsx';
 
+// for router
 import routes from './routes.js';
 import {Link} from 'react-router-dom';
 
@@ -15,7 +16,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      route: "Recommendations",
+      route: "Recommendations", //won't need this if I switch to router
       booklist: [],
       activeButton: "rec"
     }
@@ -144,4 +145,4 @@ export default App;
 
 
 //need an edit button function that will take in the new values
-//pass THAT down to favorites, who will pass it right through to EDIT BUTTON. BUtton will run that function in its own function and pass value back as it's return. 
+//pass THAT down to favorites, who will pass it right through to EDIT BUTTON. BUtton will run that function in its own function and pass value back as its return. 
