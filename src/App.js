@@ -7,10 +7,6 @@ import Recommendations from './components/Recommendations.jsx';
 import AddBook from './components/AddBook.jsx';
 import Favorites from './components/Favorites.jsx';
 
-// for router
-import routes from './routes.js';
-import {Link} from 'react-router-dom';
-
 class App extends Component {
 
   constructor(props) {
